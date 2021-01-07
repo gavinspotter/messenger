@@ -8,4 +8,8 @@ router.get("/user/:uid")
 
 router.post("/")
 
+router.delete("/:mid")
+
+
+
 module.exports = router
