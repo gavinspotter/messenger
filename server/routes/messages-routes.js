@@ -8,3 +8,4 @@ router.get("/user/:uid")
 
 router.post("/")
 
+module.exports = router
