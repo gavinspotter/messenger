@@ -10,3 +10,5 @@ const userSchema = new Schema({
     messages: [{ type: mongoose.Types.ObjectId, required: true, ref: "messages" }]
 
 })
+
+userSchema.plugin(uniqueValidator)
