@@ -11,9 +11,12 @@ const app = express()
 
 app.use(bodyParser.json())
 
+
+
+
 app.use("/api/user", userRoutes)
 
-app.use("/api/messages", messageRoutes)
+//app.use("/api/messages", messageRoutes)
 
 
 app.use((req, res, next) => {
