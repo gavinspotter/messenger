@@ -7,3 +7,5 @@ const messageSchema = new Schema({
     chat: [{ type: mongoose.Types.ObjectId, required: true, ref: "User" }]
 })
 
+module.exports = mongoose.model("messages", messageSchema)
+
