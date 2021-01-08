@@ -30,6 +30,12 @@ const createMessage = async (req, res, next) => {
         return next(error)
     }
 
+    try {
+        await createAMessage.save()
+    } catch (err) {
+
+    }
+
 
 }
 
