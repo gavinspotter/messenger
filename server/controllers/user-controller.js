@@ -44,6 +44,16 @@ const login = async (req, res, next) => {
     } catch (err) {
         const error = new HttpError("couldnt find email in our database", 500)
     }
+
+    if (!existingUser || existingUser.password !== password) {
+        const error = new HttpError(
+            "wrong stuff",
+            401
+        )
+        return next(error)
+    }
+
+
 }
 
 
