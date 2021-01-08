@@ -36,6 +36,11 @@ const createMessage = async (req, res, next) => {
 
     }
 
+    try {
+        user.messages.push(createAMessage)
+    } catch (err) {
+
+    }
 
 }
 
