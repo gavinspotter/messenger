@@ -16,6 +16,7 @@ const getUserByEmail = async (req, res, next) => {
         return next(error)
     }
 
+    res.status(201).json({ user: user.toObject({ getters: true }) })
 
 }
 
