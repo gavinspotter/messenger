@@ -15,6 +15,13 @@ const createMessage = async (req, res, next) => {
 
     let user
 
+    try {
+        user = await User.findById(chat)
+    } catch (err) {
+        const error = new HttpError("couldnt find user(s)", 500)
+        return next(error)
+    }
+
 
 }
 
