@@ -3,6 +3,8 @@ const User = require("../models/user")
 
 const getUserByEmail = async (req, res, next) => {
     const { email } = req.body
+
+    let User
 }
 
 const signup = async (req, res, next) => {
