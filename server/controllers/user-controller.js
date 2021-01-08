@@ -21,6 +21,15 @@ const signup = async (req, res, next) => {
         messages: []
     })
 
+    try {
+        await createdUser.save()
+    } catch (err) {
+        const error = new HttpError("couldnt save to database", 500)
+        return next(error)
+    }
+
+
+
 
 }
 
