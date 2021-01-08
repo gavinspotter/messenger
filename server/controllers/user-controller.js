@@ -7,6 +7,12 @@ const signup = async (req, res, next) => {
 
     let existingUser
 
+    try {
+
+    } catch (err) {
+
+    }
+
 
 
 }
