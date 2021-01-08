@@ -8,3 +8,5 @@ const User = require("../models/user")
 const createMessage = async (req, res, next) => {
 
 }
+
+exports.createMessage = createMessage
