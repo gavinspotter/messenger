@@ -42,6 +42,14 @@ const createMessage = async (req, res, next) => {
 
     }
 
+    try {
+        await user.save()
+    } catch (err) {
+
+    }
+
+
+
 }
 
 exports.createMessage = createMessage
