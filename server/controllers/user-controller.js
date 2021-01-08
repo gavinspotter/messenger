@@ -66,6 +66,6 @@ const login = async (req, res, next) => {
 
 
 
-
+exports.getUserByEmail = getUserByEmail
 exports.signup = signup
 exports.login = login
