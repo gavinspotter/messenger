@@ -25,3 +25,4 @@ const login = async (req, res, next) => {
 
 
 exports.signup = signup
+exports.login = login
