@@ -4,7 +4,19 @@ const User = require("../models/user")
 const getUserByEmail = async (req, res, next) => {
     const { email } = req.body
 
-    let User
+    let user
+
+    try {
+        user = await User.findOne({ email }, "id")
+    } catch (err) {
+        const error = new HttpError(
+            "couldnt find email",
+            500
+        )
+        return next(error)
+    }
+
+
 }
 
 const signup = async (req, res, next) => {
