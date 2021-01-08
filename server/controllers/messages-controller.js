@@ -22,6 +22,14 @@ const createMessage = async (req, res, next) => {
         return next(error)
     }
 
+    if (!user) {
+        const error = new HttpError(
+            "there are no users",
+            404
+        )
+        return next(error)
+    }
+
 
 }
 
