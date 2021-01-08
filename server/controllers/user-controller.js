@@ -39,6 +39,11 @@ const login = async (req, res, next) => {
 
     let existingUser
 
+    try {
+        existingUser = await User.findOne({ email: email })
+    } catch (err) {
+        const error = new HttpError("couldnt find email in our database", 500)
+    }
 }
 
 
