@@ -12,6 +12,10 @@ const createMessage = async (req, res, next) => {
         message,
         chat,
     })
+
+    let user
+
+
 }
 
 exports.createMessage = createMessage
