@@ -17,6 +17,12 @@ const App = () => {
     setUserId(null)
   }, [])
 
+  return (
+    <AuthContext.Provider>
+
+    </AuthContext.Provider>
+  )
+
 }
 
 export default App;
