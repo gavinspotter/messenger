@@ -3,8 +3,11 @@ const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
 const messageSchema = new Schema({
-    messsage: { type: String, required: true },
-    chat: [{ type: mongoose.Types.ObjectId, required: true, ref: "User" }]
+    message: { type: String, required: true },
+    chat:
+        [{ type: mongoose.Types.ObjectId, required: true, ref: "User" }]
+
+
 })
 
 module.exports = mongoose.model("messages", messageSchema)
