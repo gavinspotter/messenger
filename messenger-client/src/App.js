@@ -1,8 +1,9 @@
 import React, { useCallback, useState } from "react"
-import { BrowserRouter as Router, Switch } from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import MainNavigation from "./shared/components/navigation/MainNavigation"
 
 import { AuthContext } from "./shared/context/auth-context"
+import Auth from "./user/pages/Auth"
 
 const App = () => {
 
@@ -30,6 +31,9 @@ const App = () => {
   } else {
     routes = (
       <Switch>
+        <Route path="/auth">
+          <Auth />
+        </Route>
 
       </Switch>
     )
