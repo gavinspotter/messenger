@@ -140,6 +140,8 @@ const getUsers = async (req, res, next) => {
         return next(error)
     }
 
+    res.status(201).json({ message })
+
 }
 
 
