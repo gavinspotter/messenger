@@ -127,6 +127,10 @@ const createMessage = async (req, res, next) => {
 
 const getUsers = async (req, res, next) => {
     const { userId } = req.body
+
+    let message
+
+
 }
 
 
