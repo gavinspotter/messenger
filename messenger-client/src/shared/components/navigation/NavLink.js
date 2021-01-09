@@ -5,3 +5,5 @@ import "./NavLink.css"
 const NavLinks = () => {
 
 }
+
+export default NavLinks
