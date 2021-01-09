@@ -18,7 +18,10 @@ const App = () => {
   }, [])
 
   return (
-    <AuthContext.Provider>
+    <AuthContext.Provider
+      value={{ isLoggedIn: isLoggedIn, userId: userId, login: login, logout: logout }}
+    >
+
 
     </AuthContext.Provider>
   )
