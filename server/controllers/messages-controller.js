@@ -130,6 +130,15 @@ const getUsers = async (req, res, next) => {
 
     let message
 
+    try {
+        message = await Message.find({ chat: userId })
+    } catch (err) {
+        const error = new HttpError(
+            "couldnt find chat",
+            500
+        )
+        return next(error)
+    }
 
 }
 
