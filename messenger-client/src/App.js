@@ -12,6 +12,11 @@ const App = () => {
     setUserId(uid)
   }, [])
 
+  const logout = useCallback(() => {
+    setIsLoggedIn(false)
+    setUserId(null)
+  }, [])
+
 }
 
 export default App;
