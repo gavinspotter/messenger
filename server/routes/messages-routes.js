@@ -8,6 +8,8 @@ router.get("/user/:uid")
 
 router.post("/", messageController.createMessage)
 
+router.post("/getmessages", messageController.getUsers)
+
 router.delete("/:mid")
 
 
