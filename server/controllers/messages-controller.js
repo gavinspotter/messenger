@@ -144,5 +144,5 @@ const getUsers = async (req, res, next) => {
 
 }
 
-
+exports.getUsers = getUsers
 exports.createMessage = createMessage
