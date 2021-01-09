@@ -125,4 +125,7 @@ const createMessage = async (req, res, next) => {
 
 }
 
+const getUsers = async (req, res, next) => { }
+
+
 exports.createMessage = createMessage
