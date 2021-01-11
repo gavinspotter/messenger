@@ -1,5 +1,7 @@
 const Message = require("../models/messages")
 
+const MessageBoard = require("../models/messageboards")
+
 const HttpError = require("../models/HttpError")
 
 const User = require("../models/user")
