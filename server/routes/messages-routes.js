@@ -8,6 +8,8 @@ router.get("/user/:uid")
 
 router.post("/")
 
+router.post("/createmb", messageController.createMessageBoard)
+
 router.post("/getmessages")
 
 router.delete("/:mid")
