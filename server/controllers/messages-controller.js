@@ -19,6 +19,13 @@ const createMessageBoard = async (req, res, next) => {
 
     let user1
 
+    try {
+        user = await User.findById(chat[0])
+    } catch (err) {
+        const error = new HttpError("couldnt find user", 500)
+        return next(error)
+    }
+
 
 
 }
