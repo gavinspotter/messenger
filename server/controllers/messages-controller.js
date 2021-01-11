@@ -13,6 +13,12 @@ const createMessageBoard = async (req, res, next) => {
         chat
     } = req.body
 
+    const createdMessageBoard = new MessageBoard({
+        chat
+    })
+
+    let user1
+
 
 
 }
