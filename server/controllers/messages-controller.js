@@ -9,6 +9,8 @@ const User = require("../models/user")
 
 const createMessageBoard = async (req, res, next) => {
 
+
+
 }
 
 const createMessage = async (req, res, next) => {
@@ -21,5 +23,5 @@ const createMessage = async (req, res, next) => {
 
 
 
-
+exports.createMessageBoard = createMessageBoard
 exports.createMessage = createMessage
