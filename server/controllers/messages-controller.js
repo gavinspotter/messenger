@@ -34,6 +34,13 @@ const createMessageBoard = async (req, res, next) => {
         return next(error)
     }
 
+    try {
+        await createdMessageBoard.save()
+    } catch (err) {
+
+    }
+
+
 
 }
 
