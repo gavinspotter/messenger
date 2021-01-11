@@ -9,6 +9,10 @@ const User = require("../models/user")
 
 const createMessageBoard = async (req, res, next) => {
 
+    const {
+        chat
+    } = req.body
+
 
 
 }
