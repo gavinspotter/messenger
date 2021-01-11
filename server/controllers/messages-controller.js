@@ -20,12 +20,19 @@ const createMessageBoard = async (req, res, next) => {
     let user1
 
     try {
-        user = await User.findById(chat[0])
+        user1 = await User.findById(chat[0])
     } catch (err) {
         const error = new HttpError("couldnt find user", 500)
         return next(error)
     }
 
+    if (!user1) {
+        const error = new HttpError(
+            "there are no users",
+            404
+        )
+        return next(error)
+    }
 
 
 }
