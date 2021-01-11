@@ -35,6 +35,12 @@ const createMessageBoard = async (req, res, next) => {
     }
 
     try {
+        await createdMessageBoard.save()
+    } catch (err) {
+
+    }
+
+    try {
         user1.messageboards.push(createdMessageBoard)
     } catch (err) {
 
@@ -58,11 +64,7 @@ const createMessageBoard = async (req, res, next) => {
     }
 
 
-    try {
-        await createdMessageBoard.save()
-    } catch (err) {
 
-    }
 
     try {
         user2.messageboards.push(createdMessageBoard)
@@ -100,6 +102,8 @@ const createMessageBoard = async (req, res, next) => {
 
     }
 
+
+    res.status(201).json({ message: createdMessageBoard })
 
 
 
