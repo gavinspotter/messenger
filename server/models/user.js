@@ -7,7 +7,7 @@ const userSchema = new Schema({
     name: { type: String, required: true, trim: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true, trim: true },
-    messages: [{ type: mongoose.Types.ObjectId, required: true, ref: "messages" }]
+    messageboards: [{ type: mongoose.Types.ObjectId, required: true, ref: "messages" }]
 
 })
 
