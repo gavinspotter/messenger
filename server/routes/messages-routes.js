@@ -6,9 +6,9 @@ const router = express.Router()
 
 router.get("/user/:uid")
 
-router.post("/", messageController.createMessage)
+router.post("/")
 
-router.post("/getmessages", messageController.getUsers)
+router.post("/getmessages")
 
 router.delete("/:mid")
 
