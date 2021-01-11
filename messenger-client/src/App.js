@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import Messages from "./messages/pages/Messages"
 import MainNavigation from "./shared/components/navigation/MainNavigation"
 
 import { AuthContext } from "./shared/context/auth-context"
@@ -27,7 +28,7 @@ const App = () => {
     routes = (
       <Switch>
         <Route path="messages">
-
+          <Messages />
         </Route>
       </Switch>
     )
