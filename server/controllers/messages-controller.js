@@ -35,16 +35,72 @@ const createMessageBoard = async (req, res, next) => {
     }
 
     try {
+        user1.messageboards.push(createdMessageBoard)
+    } catch (err) {
+
+    }
+
+    try {
+        await user1.save()
+    } catch (err) {
+
+    }
+
+    //
+
+    let user2
+
+    try {
+        user2 = await User.findById(chat[1])
+    } catch (err) {
+        const error = new HttpError("couldnt find user", 500)
+        return next(error)
+    }
+
+
+    try {
         await createdMessageBoard.save()
     } catch (err) {
 
     }
 
     try {
-        user.messageboards.push(createdMessageBoard)
+        user2.messageboards.push(createdMessageBoard)
     } catch (err) {
 
     }
+
+    try {
+        await user2.save()
+    } catch (err) {
+
+    }
+
+    //
+
+    let user3
+
+    try {
+        user3 = await User.findById(chat[2])
+    } catch (err) {
+        const error = new HttpError("couldnt find user", 500)
+        return next(error)
+    }
+
+
+    try {
+        user3.messageboards.push(createdMessageBoard)
+    } catch (err) {
+
+    }
+
+    try {
+        await user3.save()
+    } catch (err) {
+
+    }
+
+
 
 
 
