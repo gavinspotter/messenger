@@ -26,7 +26,9 @@ const App = () => {
   if (isLoggedIn) {
     routes = (
       <Switch>
+        <Route path="messages">
 
+        </Route>
       </Switch>
     )
   } else {

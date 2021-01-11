@@ -28,7 +28,7 @@ const Auth = () => {
 
         try {
             const responseData = await sendRequest(
-                "http://localhost:5000/api/users/login",
+                "http://localhost:5000/api/user/login",
                 "POST",
                 JSON.stringify({
                     email: data.login,
