@@ -40,6 +40,12 @@ const createMessageBoard = async (req, res, next) => {
 
     }
 
+    try {
+        user.messageboards.push(createdMessageBoard)
+    } catch (err) {
+
+    }
+
 
 
 }
