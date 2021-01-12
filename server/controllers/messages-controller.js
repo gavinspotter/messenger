@@ -200,6 +200,12 @@ const createMessage = async (req, res, next) => {
 
             }
 
+            try {
+                await user.save()
+            } catch (err) {
+
+            }
+
 
         }
 
@@ -211,6 +217,7 @@ const createMessage = async (req, res, next) => {
         return next(error)
     }
 
+    res.status(201).json({ message: createdMessage })
 
 
 
