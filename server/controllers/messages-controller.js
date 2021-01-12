@@ -160,6 +160,17 @@ const createMessage = async (req, res, next) => {
         messageboard,
     } = req.body
 
+    const createdMessage = new Message({
+        message,
+        messageboard
+    })
+
+    let user
+
+
+
+
+
 
 
 
