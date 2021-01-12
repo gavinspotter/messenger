@@ -155,6 +155,12 @@ const createMessageBoard = async (req, res, next) => {
 const createMessage = async (req, res, next) => {
 
 
+    const {
+        message,
+        messageboard,
+    } = req.body
+
+
 
 
 
