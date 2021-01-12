@@ -158,11 +158,14 @@ const createMessage = async (req, res, next) => {
     const {
         message,
         messageboard,
+        sender,
+        chat
     } = req.body
 
     const createdMessage = new Message({
         message,
-        messageboard
+        messageboard,
+        sender
     })
 
     let user
@@ -177,36 +180,83 @@ const createMessage = async (req, res, next) => {
         return next(error)
     }
 
+    let theuser
+
+
     try {
         let find1
         let find2
         let find3
-        find1 = await MessageBoard.findOne({ chat: chat[0] })
-        find2 = await MessageBoard.findOne({ chat: chat[1] })
-        find3 = await MessageBoard.findOne({ chat: chat[2] })
+        try {
+            find1 = await MessageBoard.findOne({ chat: chat[0] })
+        } catch (err) {
+            console.log(err)
+        }
+
+        try {
+            find2 = await MessageBoard.findOne({ chat: chat[1] })
+        } catch (err) {
+            console.log(err)
+        }
 
 
 
-        if (find1 || find2 || find3) {
+        try {
+            find3 = await MessageBoard.findOne({ chat: chat[2] })
+        } catch (err) {
+            console.log(err)
+        }
+
+
+
+        if (find3) {
             try {
                 await createdMessage.save()
             } catch (err) {
-
+                console.log(err)
             }
 
             try {
                 user.messages.push(createdMessage)
             } catch (err) {
-
+                console.log(err)
             }
 
             try {
                 await user.save()
             } catch (err) {
-
+                console.log(err)
             }
 
 
+
+        } else {
+
+            if (find1 || find2) {
+
+
+
+
+                try {
+                    await createdMessage.save()
+                } catch (err) {
+                    console.log(err)
+                }
+
+                try {
+                    user.messages.push(createdMessage)
+                } catch (err) {
+                    console.log(err)
+                }
+
+                try {
+                    await user.save()
+                } catch (err) {
+                    console.log(err)
+                }
+
+
+            }
         }
 
     } catch (err) {
