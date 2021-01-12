@@ -198,7 +198,10 @@ const createMessage = async (req, res, next) => {
         }
 
     } catch (err) {
-
+        const error = new HttpError(
+            "couldnt find users",
+            404
+        )
     }
 
 
