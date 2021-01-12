@@ -194,6 +194,12 @@ const createMessage = async (req, res, next) => {
 
             }
 
+            try {
+                user.messages.push(createdMessage)
+            } catch (err) {
+
+            }
+
 
         }
 
@@ -202,6 +208,7 @@ const createMessage = async (req, res, next) => {
             "couldnt find users",
             404
         )
+        return next(error)
     }
 
 
