@@ -239,6 +239,12 @@ const createMessage = async (req, res, next) => {
                 console.log(err)
             }
 
+            try {
+                theuser.messages.push(createdMessage)
+            } catch (err) {
+
+            }
+
 
 
         } else {
