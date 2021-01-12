@@ -167,7 +167,15 @@ const createMessage = async (req, res, next) => {
 
     let user
 
-
+    try {
+        user = await MessageBoard.findById(messageboard)
+    } catch (err) {
+        const error = new HttpError(
+            "not a message board",
+            500
+        )
+        return next(error)
+    }
 
     try {
         let find1
