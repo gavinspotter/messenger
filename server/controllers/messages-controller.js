@@ -186,7 +186,11 @@ const createMessage = async (req, res, next) => {
     try {
         theuser = await User.findById(sender)
     } catch (err) {
-
+        const error = new HttpError(
+            "not a user",
+            500
+        )
+        return next(error)
     }
 
 
