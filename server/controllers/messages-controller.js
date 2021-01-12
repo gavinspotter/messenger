@@ -184,6 +184,13 @@ const createMessage = async (req, res, next) => {
 
 
     try {
+        theuser = await User.findById(sender)
+    } catch (err) {
+
+    }
+
+
+    try {
         let find1
         let find2
         let find3
