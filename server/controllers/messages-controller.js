@@ -245,6 +245,12 @@ const createMessage = async (req, res, next) => {
 
             }
 
+            try {
+                await theuser.save()
+            } catch (err) {
+
+            }
+
 
 
         } else {
@@ -270,6 +276,18 @@ const createMessage = async (req, res, next) => {
                     await user.save()
                 } catch (err) {
                     console.log(err)
+                }
+
+                try {
+                    theuser.messages.push(createdMessage)
+                } catch (err) {
+
+                }
+
+                try {
+                    await theuser.save()
+                } catch (err) {
+
                 }
 
 
