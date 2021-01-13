@@ -9,6 +9,7 @@ const MbList = (props) => {
             { props.items.map((stuff) =>
 
                 <MbItem
+                    key={stuff._id}
                     chat={stuff.chat}
                 />
             )
