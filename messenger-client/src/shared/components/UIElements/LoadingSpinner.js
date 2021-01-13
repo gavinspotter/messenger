@@ -1,20 +1,13 @@
 import React from "react"
-import Button from "../FormElements/Button"
 
-import Modal from "./Modal"
+import "./LoadingSpinner.css"
 
-const ErrorModal = props => {
-
+const LoadingSpinner = props => {
     return (
-        <Modal
-            onCancel={props.onClear}
-            header="An Error Occurred!"
-            show={!!props.error}
-            footer={<Button onClick={props.onClear}> okay </Button>}
-        >
-            <p>{props.error}</p>
-        </Modal>
-    )
+        <div className={`${props.asOverlay && 'loading-spinner__overlay'}`}>
+            <div className="lds-dual-ring"></div>
+        </div>
+    );
 }
 
-export default ErrorModal
+export default LoadingSpinner
