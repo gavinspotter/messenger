@@ -12,7 +12,7 @@ const NavLinks = () => {
         <ul className="nav-links">
             {auth.isLoggedIn && (
                 <li>
-                    <NavLink to={`/${auth.userId}/messages`}>
+                    <NavLink to={`/${auth.userId}/messageboards`}>
                         messages
                     </NavLink>
                 </li>

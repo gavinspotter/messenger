@@ -1,17 +1,23 @@
 import React from "react"
 import Card from "../../shared/components/UIElements/Card"
 
+import "./MbItem.css"
+
 const MbItem = (props) => {
 
     return (
-        <li>
+        <li className="mb-item">
             <Card>
                 <div>
                     <div>
-                        {props.chat}
+                        {props.chat[0]}<br />
+                        {props.chat[1]}<br />
+                        {props.chat[2]}
+
                     </div>
                 </div>
             </Card>
+
         </li>
     )
 }

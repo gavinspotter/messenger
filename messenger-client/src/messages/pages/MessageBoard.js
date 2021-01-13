@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 
-import { AuthContext } from "../../shared/context/auth-context"
+
 import { useHttpClient } from "../../shared/hooks/http-hook"
 import MbList from "../components/MbList"
 
@@ -10,29 +11,38 @@ import MbList from "../components/MbList"
 
 const MessageBoard = () => {
 
-    const auth = useContext(AuthContext)
+
 
 
     const [loadedMb, setLoadedMb] = useState()
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
+    const userId = useParams().userId
+
+
+
     useEffect(() => {
-        const fetchUsers = async () => {
+
+        const fetchMb = async () => {
             try {
                 const responseData = await sendRequest(
-                    "http://localhost:5000/api/messages/messageboards",
-                    "POST",
-                    JSON.stringify({
-                        chat: auth.userId
-                    })
+                    `http://localhost:5000/api/messages/messageboards/${userId}`,
                 )
                 setLoadedMb(responseData.messageboards)
             } catch (err) {
 
             }
         }
-    })
+        fetchMb()
+    }, [sendRequest, userId])
+
+
+
+
+
+
+
 
 
     return (
@@ -43,7 +53,7 @@ const MessageBoard = () => {
                     <LoadingSpinner />
                 </div>
             )}
-            {!isLoading && loadedMb && <MbList />}
+            {!isLoading && loadedMb && <MbList items={loadedMb} />}
         </React.Fragment>
     )
 

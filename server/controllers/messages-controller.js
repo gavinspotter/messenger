@@ -321,16 +321,14 @@ const getMessages = () => {
 const getMessageBoards = async (req, res, next) => {
 
 
-    const {
-        chat
-    } = req.body
+    const userId = req.params.uid
 
 
 
     let messageboards
 
     try {
-        messageboards = await MessageBoard.find({ chat })
+        messageboards = await MessageBoard.find({ chat: userId })
 
     } catch (err) {
         const error = new HttpError(

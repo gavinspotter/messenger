@@ -4,9 +4,9 @@ const messageController = require("../controllers/messages-controller")
 
 const router = express.Router()
 
-router.get("/user/:uid")
 
-router.post("/messageboards", messageController.getMessageBoards)
+
+router.get("/messageboards/:uid", messageController.getMessageBoards)
 
 router.post("/createMessage", messageController.createMessage)
 

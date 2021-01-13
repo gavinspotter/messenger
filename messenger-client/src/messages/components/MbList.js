@@ -1,5 +1,6 @@
 import React from "react"
 import MbItem from "./MbItem"
+import "./MbList.css"
 
 const MbList = (props) => {
 

@@ -31,7 +31,7 @@ const App = () => {
         <Route path="messages">
           <Messages />
         </Route>
-        <Route path="/messageboards">
+        <Route path="/:userId/messageboards">
           <MessageBoard />
         </Route>
       </Switch>
