@@ -6,6 +6,8 @@ const router = express.Router()
 
 router.get("/user/:uid")
 
+router.post("/messageboards/", messageController.getMessageBoards)
+
 router.post("/createMessage", messageController.createMessage)
 
 router.post("/createmb", messageController.createMessageBoard)

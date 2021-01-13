@@ -319,7 +319,11 @@ const getMessages = () => {
 }
 
 const getMessageBoards = async () => {
-    const userId = req.params.uid
+
+
+    const {
+        chat
+    } = req.body
 
     let messageboards
 
@@ -336,7 +340,7 @@ const getMessageBoards = async () => {
         return next(new HttpError("no message board found"))
     }
 
-
+    res.json({ messageboards })
 
 
 
