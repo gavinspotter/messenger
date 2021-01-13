@@ -8,7 +8,7 @@ const router = express.Router()
 
 router.get("/messageboards/:uid", messageController.getMessageBoards)
 
-router.get("/findmb/:mbid")
+router.get("/findmb/:mbid", messageController.getMessageBoardById)
 
 router.post("/createMessage", messageController.createMessage)
 
