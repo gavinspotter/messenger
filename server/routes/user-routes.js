@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.post("/email", userController.getUserByEmail)
 
-router.get("/:uid", userController.getUserById)
+router.get("/findemail/:uid", userController.getUserById)
 
 router.post("/signup", userController.signup)
 
