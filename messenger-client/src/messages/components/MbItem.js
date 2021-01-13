@@ -1,11 +1,18 @@
 import React from "react"
+import Card from "../../shared/components/UIElements/Card"
 
 const MbItem = () => {
 
     return (
-        <div className="">
-            hi
-        </div>
+        <li>
+            <Card>
+                <div>
+                    <div>
+
+                    </div>
+                </div>
+            </Card>
+        </li>
     )
 }
 
