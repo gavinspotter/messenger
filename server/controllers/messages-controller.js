@@ -352,6 +352,10 @@ const getMessageBoards = async (req, res, next) => {
 const getMessageBoardById = async (req, res, next) => {
 
     const userId = req.params.mbid
+
+    let messageboard
+
+
 }
 
 
