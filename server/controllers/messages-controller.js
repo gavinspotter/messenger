@@ -318,11 +318,19 @@ const getMessages = () => {
 
 }
 
-const getMessageBoards = () => {
+const getMessageBoards = async () => {
     const userId = req.params.uid
 
     let messageboards
 
+    try {
+        messageboards = await MessageBoard.find({ chat: userId })
+    } catch (err) {
+        const error = new HttpError(
+            "couldnt find message board by user id", 500
+        )
+        return next(error)
+    }
 
 
 
