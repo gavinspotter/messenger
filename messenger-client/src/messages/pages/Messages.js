@@ -5,6 +5,7 @@ import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
+import MessageList from "../components/MessageList"
 
 const Messages = () => {
 
@@ -38,6 +39,7 @@ const Messages = () => {
                     <LoadingSpinner />
                 </div>
             )}
+            {!isLoading && loadedMessageBoard && <MessageList items={loadedMessageBoard} />}
         </React.Fragment>
     )
 }
