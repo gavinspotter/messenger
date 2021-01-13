@@ -369,6 +369,7 @@ const getMessageBoardById = async (req, res, next) => {
         return next(new HttpError("no messageboard found"))
     }
 
+    res.json({ messageboard })
 
 
 }
