@@ -29,6 +29,40 @@ const MbItem = (props) => {
 
     }, [sendRequest, props.chat])
 
+    useEffect(() => {
+        const fetchEmail = async () => {
+            try {
+                const responseData = await sendRequest(
+                    `http://localhost:5000/api/user/findemail/${props.chat[1]}`
+                )
+                setChat2(responseData.user.email)
+            } catch (err) {
+
+            }
+        }
+        fetchEmail()
+
+    }, [sendRequest, props.chat])
+
+
+
+    useEffect(() => {
+        const fetchEmail = async () => {
+            try {
+                const responseData = await sendRequest(
+                    `http://localhost:5000/api/user/findemail/${props.chat[2]}`
+                )
+                setChat3(responseData.user.email)
+            } catch (err) {
+
+            }
+        }
+        fetchEmail()
+
+    }, [sendRequest, props.chat])
+
+
+
 
 
 
@@ -38,8 +72,8 @@ const MbItem = (props) => {
                 <div>
                     <div>
                         {chat1}<br />
-                        {props.chat[1]}<br />
-                        {props.chat[2]}
+                        {chat2}<br />
+                        {chat3}
 
                     </div>
                 </div>

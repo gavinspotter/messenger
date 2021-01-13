@@ -8,6 +8,8 @@ router.post("/email", userController.getUserByEmail)
 
 router.get("/findemail/:uid", userController.getUserById)
 
+router.get("/findmb/:mbid")
+
 router.post("/signup", userController.signup)
 
 router.post("/login", userController.login)
