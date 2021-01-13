@@ -4,6 +4,8 @@ import { useHttpClient } from "../../shared/hooks/http-hook"
 
 const MessageBoard = () => {
 
+    const { isLoading, error, sendRequest, clearError } = useHttpClient()
+
 }
 
 
