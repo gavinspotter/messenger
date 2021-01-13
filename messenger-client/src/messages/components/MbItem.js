@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import Card from "../../shared/components/UIElements/Card"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
@@ -68,7 +69,7 @@ const MbItem = (props) => {
 
     return (
         <li className="mb-item">
-            <Card>
+            <Card> <Link to={`/${props._id}/messageboard`}>
                 <div>
                     <div>
                         {chat1}<br />
@@ -77,6 +78,7 @@ const MbItem = (props) => {
 
                     </div>
                 </div>
+            </Link>
             </Card>
 
         </li>
