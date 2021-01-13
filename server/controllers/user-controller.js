@@ -85,7 +85,7 @@ const login = async (req, res, next) => {
 }
 
 
-
+exports.getUserById = getUserById
 exports.getUserByEmail = getUserByEmail
 exports.signup = signup
 exports.login = login
