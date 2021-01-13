@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
 
@@ -11,6 +11,22 @@ const Messages = () => {
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
     const mbId = useParams().mbId
+
+
+
+    useEffect(() => {
+        const fetchMessageBoard = async () => {
+            try {
+                const responseData = await sendRequest(
+                    `http://localhost:5000/messages/findmb/${mbId}`
+                )
+                setLoadedMessageBoard(responseData.messageboard)
+            } catch (err) {
+
+            }
+        }
+        fetchMessageBoard()
+    }, [sendRequest, mbId])
 
     return (
         <div>
