@@ -312,6 +312,14 @@ const getMessages = () => {
         messageboard,
         message,
     } = req.body
+
+
+
+
+}
+
+const getMessageBoards = () => {
+
 }
 
 
