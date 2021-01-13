@@ -1,13 +1,19 @@
 import React from "react"
 import MbItem from "./MbItem"
 
-const MbList = () => {
+const MbList = (props) => {
 
     return (
         <ul className="mb-list">
 
+            { props.items.map((stuff) =>
 
-            <MbItem />
+                <MbItem
+                    chat={stuff.chat}
+                />
+            )
+
+            }
         </ul>
     )
 }
