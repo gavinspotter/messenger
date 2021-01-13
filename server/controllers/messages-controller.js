@@ -332,6 +332,12 @@ const getMessageBoards = async () => {
         return next(error)
     }
 
+    if (!messageboards || messageboards.length === 0) {
+        return next(new HttpError("no message board found"))
+    }
+
+
+
 
 
 }
