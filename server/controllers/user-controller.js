@@ -25,6 +25,10 @@ const getUserById = async (req, res, next) => {
     const {
         id
     } = req.body
+
+    let user
+
+
 }
 
 const signup = async (req, res, next) => {
