@@ -354,6 +354,7 @@ const getMessageBoardById = async (req, res, next) => {
 }
 
 
+exports.getMessageBoardById = getMessageBoardById
 exports.getMessageBoards = getMessageBoards
 exports.getMessages = getMessages
 exports.createMessageBoard = createMessageBoard
