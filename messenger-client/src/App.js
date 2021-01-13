@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import MessageBoard from "./messages/pages/MessageBoard"
 import Messages from "./messages/pages/Messages"
 import MainNavigation from "./shared/components/navigation/MainNavigation"
 
@@ -29,6 +30,9 @@ const App = () => {
       <Switch>
         <Route path="messages">
           <Messages />
+        </Route>
+        <Route path="/messageboards">
+          <MessageBoard />
         </Route>
       </Switch>
     )

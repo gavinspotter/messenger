@@ -24,9 +24,10 @@ const MessageBoard = () => {
                     "http://localhost:5000/api/messages/messageboards",
                     "POST",
                     JSON.stringify({
-                        chat: 
+                        chat: auth.userId
                     })
                 )
+                setLoadedMb(responseData.messageboards)
             } catch (err) {
 
             }
