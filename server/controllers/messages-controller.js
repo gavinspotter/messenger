@@ -321,6 +321,10 @@ const getMessages = () => {
 const getMessageBoards = () => {
     const userId = req.params.uid
 
+    let messageboards
+
+
+
 
 }
 
