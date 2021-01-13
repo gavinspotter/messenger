@@ -318,23 +318,28 @@ const getMessages = () => {
 
 }
 
-const getMessageBoards = async () => {
+const getMessageBoards = async (req, res, next) => {
 
 
     const {
         chat
     } = req.body
 
+
+
     let messageboards
 
     try {
-        messageboards = await MessageBoard.find({ chat: userId })
+        messageboards = await MessageBoard.find({ chat })
+
     } catch (err) {
         const error = new HttpError(
             "couldnt find message board by user id", 500
         )
         return next(error)
     }
+
+    //messageboards.find(stuff => stuff === chatuser)
 
     if (!messageboards || messageboards.length === 0) {
         return next(new HttpError("no message board found"))
