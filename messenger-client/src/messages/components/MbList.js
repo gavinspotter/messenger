@@ -4,7 +4,7 @@ import MbItem from "./MbItem"
 const MbList = () => {
 
     return (
-        <ul className="mb-items">
+        <ul className="mb-list">
 
 
             <MbItem />
