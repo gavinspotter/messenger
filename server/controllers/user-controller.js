@@ -28,6 +28,15 @@ const getUserById = async (req, res, next) => {
 
     let user
 
+    try {
+        user = await User.findById(id)
+    } catch (err) {
+        const error = new HttpError(
+            "couldnt find user id",
+            500
+        )
+    }
+
 
 }
 
