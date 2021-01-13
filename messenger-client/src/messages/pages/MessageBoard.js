@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 
@@ -10,6 +10,7 @@ import MbList from "../components/MbList"
 
 const MessageBoard = () => {
 
+    const auth = useContext(AuthContext)
 
 
     const [loadedMb, setLoadedMb] = useState()
