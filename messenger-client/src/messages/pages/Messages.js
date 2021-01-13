@@ -7,6 +7,8 @@ const Messages = () => {
 
     const [loadedMessageBoard, setLoadedMessageBoard] = useState()
 
+    const { isLoading, error, sendRequest, clearError } = useHttpClient()
+
     return (
         <div>
             hi
