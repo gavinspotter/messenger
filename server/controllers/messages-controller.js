@@ -349,6 +349,9 @@ const getMessageBoards = async (req, res, next) => {
 
 }
 
+const getMessageBoardById = async (req, res, next) => {
+
+}
 
 
 exports.getMessageBoards = getMessageBoards
