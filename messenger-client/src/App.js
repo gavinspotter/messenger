@@ -28,11 +28,11 @@ const App = () => {
   if (isLoggedIn) {
     routes = (
       <Switch>
-        <Route path="messages">
-          <Messages />
-        </Route>
         <Route path="/:userId/messageboards">
           <MessageBoard />
+        </Route>
+        <Route path="/:mbId/messageboard">
+          <Messages />
         </Route>
       </Switch>
     )

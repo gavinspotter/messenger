@@ -1,6 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 
 const Messages = () => {
+
+    const [loadedMessageBoard, setLoadedMessageBoard] = useState()
 
     return (
         <div>
