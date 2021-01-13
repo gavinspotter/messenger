@@ -313,6 +313,6 @@ const getMessages = () => {
 
 
 
-
+exports.getMessages = getMessages
 exports.createMessageBoard = createMessageBoard
 exports.createMessage = createMessage
