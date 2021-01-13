@@ -22,14 +22,12 @@ const getUserByEmail = async (req, res, next) => {
 
 const getUserById = async (req, res, next) => {
 
-    const {
-        id
-    } = req.body
+    const userId = req.params.uid
 
     let user
 
     try {
-        user = await User.findById(id)
+        user = await User.findById(userId, "email")
     } catch (err) {
         const error = new HttpError(
             "couldnt find user id",
