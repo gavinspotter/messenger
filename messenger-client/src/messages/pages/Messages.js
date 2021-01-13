@@ -29,9 +29,9 @@ const Messages = () => {
     }, [sendRequest, mbId])
 
     return (
-        <div>
-            hi
-        </div>
+        <React.Fragment>
+
+        </React.Fragment>
     )
 }
 
