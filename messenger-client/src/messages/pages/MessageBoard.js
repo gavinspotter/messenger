@@ -8,6 +8,12 @@ const MessageBoard = () => {
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
+    return (
+        <React.Fragment>
+
+        </React.Fragment>
+    )
+
 }
 
 
