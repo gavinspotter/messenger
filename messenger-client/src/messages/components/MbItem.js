@@ -9,6 +9,7 @@ const MbItem = (props) => {
 
     const [chat1, setChat1] = useState()
     const [chat2, setChat2] = useState()
+    const [chat3, setChat3] = useState()
 
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
