@@ -20,6 +20,10 @@ const getUserByEmail = async (req, res, next) => {
 
 }
 
+const getUserById = async (req, res, next) => {
+
+}
+
 const signup = async (req, res, next) => {
 
     const { name, email, password } = req.body
