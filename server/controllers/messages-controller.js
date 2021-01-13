@@ -324,7 +324,7 @@ const getMessageBoards = () => {
 
 
 
-
+exports.getMessageBoards = getMessageBoards
 exports.getMessages = getMessages
 exports.createMessageBoard = createMessageBoard
 exports.createMessage = createMessage
