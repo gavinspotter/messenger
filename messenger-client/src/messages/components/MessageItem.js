@@ -5,6 +5,7 @@ import { useHttpClient } from "../../shared/hooks/http-hook"
 
 const MessageItem = (props) => {
 
+    const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
 
 
