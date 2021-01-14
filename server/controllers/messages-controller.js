@@ -308,10 +308,6 @@ const createMessage = async (req, res, next) => {
 
 const getMessages = () => {
 
-    const {
-        messageboard,
-        message,
-    } = req.body
 
 
 

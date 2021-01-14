@@ -26,6 +26,7 @@ const Messages = () => {
                     `http://localhost:5000/api/messages/findmb/${mbId}`
                 )
                 setLoadedMessageBoard(responseData.messageboard.messages)
+                console.log(responseData.messageboard.messages)
             } catch (err) {
 
             }
