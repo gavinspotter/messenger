@@ -306,7 +306,7 @@ const createMessage = async (req, res, next) => {
 
 }
 
-const getMessages = async () => {
+const getMessages = async (req, res, next) => {
 
     const mid = req.params.mid
 
@@ -322,7 +322,7 @@ const getMessages = async () => {
         return next(error)
     }
 
-    if (!message || message.lenght === 0) {
+    if (!message || message.length === 0) {
         return next(new HttpError("no message found"))
     }
 
