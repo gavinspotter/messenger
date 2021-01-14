@@ -21,9 +21,9 @@ const Messages = () => {
         const fetchMessageBoard = async () => {
             try {
                 const responseData = await sendRequest(
-                    `http://localhost:5000/messages/findmb/${mbId}`
+                    `http://localhost:5000/api/messages/findmb/${mbId}`
                 )
-                setLoadedMessageBoard(responseData.messageboard)
+                setLoadedMessageBoard(responseData.messageboard.messages)
             } catch (err) {
 
             }
@@ -39,7 +39,7 @@ const Messages = () => {
                     <LoadingSpinner />
                 </div>
             )}
-            {!isLoading && loadedMessageBoard && <MessageList items={loadedMessageBoard} />}
+            {!isLoading && loadedMessageBoard && <MessageList stuff={loadedMessageBoard} />}
         </React.Fragment>
     )
 }

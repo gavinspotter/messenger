@@ -6,12 +6,12 @@ import "./MessageList.css"
 const MessageList = (props) => {
 
     return (
-        <ul name="mb-list">
+        <ul className="mb-list">
             {
-                props.items.map((stuff) =>
+                props.stuff.map((data) =>
                     <MessageItem
-                        key={stuff._id}
-                        messages={stuff.messages}
+                        key={data.messages}
+                        messages={data.messages}
                     />
                 )
             }

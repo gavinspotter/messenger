@@ -11,6 +11,7 @@ const MbList = (props) => {
 
                 <MbItem
                     key={stuff._id}
+                    _id={stuff._id}
                     chat={stuff.chat}
                 />
             )
