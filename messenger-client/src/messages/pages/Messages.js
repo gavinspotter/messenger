@@ -11,6 +11,8 @@ const Messages = () => {
 
     const [loadedMessageBoard, setLoadedMessageBoard] = useState()
 
+    const [keys, setLoadedKeys] = useState()
+
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
     const mbId = useParams().mbId
@@ -23,7 +25,7 @@ const Messages = () => {
                 const responseData = await sendRequest(
                     `http://localhost:5000/api/messages/findmb/${mbId}`
                 )
-                setLoadedMessageBoard(responseData.messageboard)
+                setLoadedMessageBoard(responseData.messageboard.messages)
             } catch (err) {
 
             }
