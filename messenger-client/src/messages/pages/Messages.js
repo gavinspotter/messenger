@@ -23,7 +23,7 @@ const Messages = () => {
                 const responseData = await sendRequest(
                     `http://localhost:5000/api/messages/findmb/${mbId}`
                 )
-                setLoadedMessageBoard(responseData.messageboard.messages)
+                setLoadedMessageBoard(responseData.messageboard)
             } catch (err) {
 
             }
