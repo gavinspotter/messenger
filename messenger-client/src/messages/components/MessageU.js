@@ -1,11 +1,13 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
 
-const MessageU = () => {
+const MessageU = (props) => {
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
+
+    const [message, setMessage] = useState()
 
 
     useEffect(() => {
