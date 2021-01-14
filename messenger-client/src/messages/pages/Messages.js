@@ -19,20 +19,41 @@ const Messages = () => {
 
 
 
+
     useEffect(() => {
         const fetchMessageBoard = async () => {
+
+
+
             try {
                 const responseData = await sendRequest(
                     `http://localhost:5000/api/messages/findmb/${mbId}`
                 )
-                setLoadedMessageBoard(responseData.messageboard.messages)
+                setLoadedMessageBoard(responseData.messageboard)
                 console.log(responseData.messageboard.messages)
+
+
             } catch (err) {
 
             }
+
+
+
         }
         fetchMessageBoard()
     }, [sendRequest, mbId])
+
+    // useEffect(()=> {
+    //     const fetchMessages = async ()=> {
+    //         try {
+    //             const responseData = await sendRequest(
+    //                 `http://localhost:5000/api/messages/getmessages/${messages}`
+    //             )
+    //         } catch (err) {
+
+    //         }
+    //     }
+    // })
 
     return (
         <React.Fragment>

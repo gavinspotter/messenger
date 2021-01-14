@@ -369,7 +369,7 @@ const getMessageBoardById = async (req, res, next) => {
     let messageboard
 
     try {
-        messageboard = await MessageBoard.findById(userId)
+        messageboard = await MessageBoard.find({ _id: userId })
     } catch (err) {
         const error = new HttpError(
             "couldnt find messageboard by id",

@@ -10,26 +10,28 @@ const MessageItem = (props) => {
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
 
+
     useEffect(() => {
         const fetchMessages = async () => {
             try {
                 const responseData = await sendRequest(
                     `http://localhost:5000/api/messages/getmessages/${props.messages}`
                 )
-
+                setMessage(responseData.message.message)
             } catch (err) {
 
             }
 
         }
-    })
+        fetchMessages()
+    }, [sendRequest, props.messages])
 
 
     return (
         <li className="mb-item">
             <Card>
                 <div>
-                    {props.messages}
+                    {message}
                 </div>
             </Card>
         </li>
