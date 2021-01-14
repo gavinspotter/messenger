@@ -306,12 +306,21 @@ const createMessage = async (req, res, next) => {
 
 }
 
-const getMessages = () => {
+const getMessages = async () => {
 
     const mid = req.params.mid
 
     let message
 
+    try {
+        message = await Message.findById(mid)
+    } catch (err) {
+        const error = new HttpError(
+            "couldnt find the message, sorry",
+            500
+        )
+        return next(error)
+    }
 
 
 }
