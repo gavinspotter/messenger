@@ -308,7 +308,7 @@ const createMessage = async (req, res, next) => {
 
 const getMessages = () => {
 
-
+    const mid = req.params.mid
 
 
 
