@@ -14,7 +14,7 @@ router.post("/createMessage", messageController.createMessage)
 
 router.post("/createmb", messageController.createMessageBoard)
 
-router.get("/getmessages/:mid")
+router.get("/getmessages/:mid", messageController.getMessages)
 
 router.delete("/:mid")
 
