@@ -326,6 +326,8 @@ const getMessages = async () => {
         return next(new HttpError("no message found"))
     }
 
+    res.json({ message })
+
 
 }
 
