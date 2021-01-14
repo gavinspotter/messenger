@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Card from "../../shared/components/UIElements/Card"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
@@ -10,7 +10,19 @@ const MessageItem = (props) => {
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
 
+    useEffect(() => {
+        const fetchMessages = async () => {
+            try {
+                const responseData = await sendRequest(
+                    `http://localhost:5000/api/messages/getmessages/${props.messages}`
+                )
 
+            } catch (err) {
+
+            }
+
+        }
+    })
 
 
     return (
