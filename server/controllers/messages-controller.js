@@ -322,6 +322,10 @@ const getMessages = async () => {
         return next(error)
     }
 
+    if (!message || message.lenght === 0) {
+        return next(new HttpError("no message found"))
+    }
+
 
 }
 
