@@ -310,6 +310,8 @@ const getMessages = () => {
 
     const mid = req.params.mid
 
+    let message
+
 
 
 }
