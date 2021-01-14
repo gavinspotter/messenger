@@ -4,6 +4,9 @@ import { useHttpClient } from "../../shared/hooks/http-hook"
 
 const MessageU = () => {
 
+    const { isLoading, error, sendRequest, clearError } = useHttpClient()
+
+
 
     useEffect(() => {
         const fetchMessages = async () => {
