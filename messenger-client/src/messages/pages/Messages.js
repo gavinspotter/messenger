@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 
-
+import { useForm } from "react-hook-form"
 import { useHttpClient } from "../../shared/hooks/http-hook"
 import MessageList from "../components/MessageList"
 
@@ -17,6 +18,10 @@ const Messages = () => {
 
     const mbId = useParams().mbId
 
+
+    const onSubmit = () => {
+
+    }
 
 
 
@@ -63,6 +68,13 @@ const Messages = () => {
                     <LoadingSpinner />
                 </div>
             )}
+            <div>
+                <Card>
+                    <form>
+
+                    </form>
+                </Card>
+            </div>
             {!isLoading && loadedMessageBoard && <MessageList stuff={loadedMessageBoard} />}
         </React.Fragment>
     )
