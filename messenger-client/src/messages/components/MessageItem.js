@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import Card from "../../shared/components/UIElements/Card"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
+import MessageU from "./MessageU"
 
 const MessageItem = (props) => {
 
@@ -31,6 +32,14 @@ const MessageItem = (props) => {
         <li className="mb-item">
             <Card>
                 <div>
+                    {/* {props.messages.map((x) =>
+                        <MessageU
+                            key={x._id}
+                            messages={x._id}
+
+                        />
+                    )} */}
+
                     {message}
                 </div>
             </Card>

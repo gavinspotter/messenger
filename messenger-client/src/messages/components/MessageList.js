@@ -10,8 +10,8 @@ const MessageList = (props) => {
             {
                 props.stuff.map((data) =>
                     <MessageItem
-                        key={data._id}
-                        messages={data.messages}
+                        key={data}
+                        messages={data}
                     />
                 )
             }

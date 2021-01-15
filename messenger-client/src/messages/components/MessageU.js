@@ -25,6 +25,11 @@ const MessageU = (props) => {
         fetchMessages()
     }, [sendRequest, props.messages])
 
+    return (
+        <div>
+            {message}
+        </div>
+    )
 
 
 }
