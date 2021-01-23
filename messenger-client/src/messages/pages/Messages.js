@@ -12,6 +12,9 @@ import { AuthContext } from "../../shared/context/auth-context"
 
 const Messages = () => {
 
+
+    const auth = useContext(AuthContext)
+
     const [loadedMessageBoard, setLoadedMessageBoard] = useState()
 
     const { register, handleSubmit } = useForm()
