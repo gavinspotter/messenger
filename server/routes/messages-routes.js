@@ -10,7 +10,7 @@ router.get("/messageboards/:uid", messageController.getMessageBoards)
 
 router.get("/findmb/:mbid", messageController.getMessageBoardById)
 
-router.get("/findUserById/:uid")
+router.get("/findUserById/:uid", messageController.getUserById)
 
 router.post("/createMessage", messageController.createMessage)
 
