@@ -23,6 +23,7 @@ const MessageBoard = () => {
 
     const userId = useParams().userId
 
+    const onSubmit = async () => { }
 
 
 
