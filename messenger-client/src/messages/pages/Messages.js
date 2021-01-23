@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form"
 import { useHttpClient } from "../../shared/hooks/http-hook"
 import MessageList from "../components/MessageList"
 import Input from "../../shared/components/FormElements/Input"
+import { AuthContext } from "../../shared/context/auth-context"
 
 const Messages = () => {
 
@@ -21,7 +22,17 @@ const Messages = () => {
 
 
     const onSubmit = async (data) => {
+        try {
+            await sendRequest(
+                `http://localhost:5000/api/messages/createmessage`,
+                "POST",
+                JSON.stringify(
+                    sender:
+                )
+            )
+        } catch (err) {
 
+        }
     }
 
 
@@ -36,7 +47,7 @@ const Messages = () => {
                     `http://localhost:5000/api/messages/findmb/${mbId}`
                 )
                 setLoadedMessageBoard(responseData.messageboard.messages)
-                console.log(responseData.messageboard.messages)
+                console.log(responseData.messageboard)
 
 
             } catch (err) {
@@ -73,7 +84,7 @@ const Messages = () => {
                 <Card>
                     <form>
                         <Input
-                            valRef={ }
+                            valRef={register}
                             name="messages"
                         />
                     </form>
