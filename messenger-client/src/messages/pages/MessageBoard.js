@@ -23,7 +23,11 @@ const MessageBoard = () => {
 
     const userId = useParams().userId
 
-    const onSubmit = async () => { }
+    const onSubmit = async (data) => {
+
+
+
+    }
 
 
 
@@ -63,12 +67,18 @@ const MessageBoard = () => {
                 <form>
                     <Input
                         element="input"
+                        valRef={register}
+                        name="player1"
                     />
                     <Input
                         element="input"
+                        valRef={register}
+                        name="player1"
                     />
                     <Input
                         element="input"
+                        valRef={register}
+                        name="player1"
                     />
                 </form>
             </Card>
