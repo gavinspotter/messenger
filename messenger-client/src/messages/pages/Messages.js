@@ -13,14 +13,14 @@ const Messages = () => {
 
     const [loadedMessageBoard, setLoadedMessageBoard] = useState()
 
-
+    const { register, handleSubmit } = useForm()
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
     const mbId = useParams().mbId
 
 
-    const onSubmit = async () => {
+    const onSubmit = async (data) => {
 
     }
 
