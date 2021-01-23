@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { useForm } from "react-hook-form"
 import { useParams } from "react-router-dom"
 import Input from "../../shared/components/FormElements/Input"
 import Card from "../../shared/components/UIElements/Card"
@@ -14,13 +15,15 @@ import MbList from "../components/MbList"
 const MessageBoard = () => {
 
 
-
+    const { register, handleSubmit } = useForm()
 
     const [loadedMb, setLoadedMb] = useState()
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
     const userId = useParams().userId
+
+
 
 
 
