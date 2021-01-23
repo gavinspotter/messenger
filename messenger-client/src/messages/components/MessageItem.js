@@ -12,7 +12,9 @@ const MessageItem = (props) => {
 
 
 
+
     useEffect(() => {
+
         const fetchMessages = async () => {
             try {
                 const responseData = await sendRequest(
@@ -32,13 +34,6 @@ const MessageItem = (props) => {
         <li className="mb-item">
             <Card>
                 <div>
-                    {/* {props.messages.map((x) =>
-                        <MessageU
-                            key={x._id}
-                            messages={x._id}
-
-                        />
-                    )} */}
 
                     {message}
                 </div>
