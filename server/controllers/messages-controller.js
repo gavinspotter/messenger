@@ -387,8 +387,8 @@ const getMessageBoardById = async (req, res, next) => {
 
 }
 
-const getUserById = async (req, res, next) => {
-    const userId = req.params.uid
+const getMessengerByMessageId = async (req, res, next) => {
+    const userId = req.params.mid
 
     let message
 
@@ -402,13 +402,16 @@ const getUserById = async (req, res, next) => {
         return next(error)
     }
 
+
+
+
     res.json({ message })
 
 
 }
 
 
-exports.getUserById = getUserById
+exports.getMessengerByMessageId = getMessengerByMessageId
 exports.getMessageBoardById = getMessageBoardById
 exports.getMessageBoards = getMessageBoards
 exports.getMessages = getMessages
