@@ -12,7 +12,7 @@ router.get("/findmb/:mbid", messageController.getMessageBoardById)
 
 router.get("/findmessenger/:mid", messageController.getMessengerByMessageId)
 
-router.get("/getuserbyemail/:ue")
+router.get("/getuserbyemail/:ue", messageController.getUserIDByEmail)
 
 router.post("/createMessage", messageController.createMessage)
 
