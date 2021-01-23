@@ -418,9 +418,17 @@ const getUserIDByEmail = async (req, res, next) => {
 
     try {
 
-    } catch (err) {
+        user = await User.find({ email: ue }, "_id")
 
+    } catch (err) {
+        const error = new HttpError(
+            "couldnt find user email",
+            500
+        )
+        return next(error)
     }
+
+
 
 }
 
