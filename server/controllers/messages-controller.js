@@ -387,6 +387,10 @@ const getMessageBoardById = async (req, res, next) => {
 
 }
 
+const getUserById = async (req, res, next) => {
+
+}
+
 
 exports.getMessageBoardById = getMessageBoardById
 exports.getMessageBoards = getMessageBoards
