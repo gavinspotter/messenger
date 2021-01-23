@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useContext } from "react"
 import { useParams } from "react-router-dom"
 import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
@@ -9,6 +9,7 @@ import { useHttpClient } from "../../shared/hooks/http-hook"
 import MessageList from "../components/MessageList"
 import Input from "../../shared/components/FormElements/Input"
 import { AuthContext } from "../../shared/context/auth-context"
+import Button from "../../shared/components/FormElements/Button"
 
 const Messages = () => {
 
@@ -27,15 +28,43 @@ const Messages = () => {
     const onSubmit = async (data) => {
         try {
             await sendRequest(
-                `http://localhost:5000/api/messages/createmessage`,
+                `http://localhost:5000/api/messages/createMessage`,
                 "POST",
-                JSON.stringify(
-                    sender:
-                )
+                JSON.stringify({
+                    sender: auth.userId,
+                    messageboard: mbId,
+                    message: data.messages,
+                    chat: [auth.userId]
+                }),
+                {
+                    "Content-Type": "application/json"
+                }
             )
         } catch (err) {
+            console.log(err)
+        }
+
+        const fetchMessageBoard = async () => {
+
+
+
+            try {
+                const responseData = await sendRequest(
+                    `http://localhost:5000/api/messages/findmb/${mbId}`
+                )
+                setLoadedMessageBoard(responseData.messageboard.messages)
+                console.log(responseData.messageboard)
+
+
+            } catch (err) {
+
+            }
+
+
 
         }
+        fetchMessageBoard()
+
     }
 
 
@@ -85,11 +114,12 @@ const Messages = () => {
             )}
             <div>
                 <Card>
-                    <form>
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <Input
                             valRef={register}
                             name="messages"
                         />
+                        <Button>message</Button>
                     </form>
                 </Card>
             </div>
