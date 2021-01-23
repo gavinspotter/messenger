@@ -388,7 +388,7 @@ const getMessageBoardById = async (req, res, next) => {
 }
 
 const getUserById = async (req, res, next) => {
-
+    const userId = req.params.uid
 }
 
 
