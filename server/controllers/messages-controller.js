@@ -402,6 +402,9 @@ const getUserById = async (req, res, next) => {
         return next(error)
     }
 
+    res.json({ message })
+
+
 }
 
 
