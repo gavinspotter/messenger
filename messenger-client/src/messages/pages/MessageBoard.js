@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
 import { useParams } from "react-router-dom"
 import Button from "../../shared/components/FormElements/Button"
@@ -15,6 +15,7 @@ import MbList from "../components/MbList"
 
 const MessageBoard = () => {
 
+    const auth = useContext(AuthContext)
 
     const { register, handleSubmit } = useForm()
 
@@ -33,7 +34,7 @@ const MessageBoard = () => {
                     JSON.stringify({
                         chat: [
                             data.player2,
-                            data.player3
+                            auth.userId
                         ]
                     }),
                     {
@@ -51,25 +52,7 @@ const MessageBoard = () => {
                     JSON.stringify({
                         chat: [
                             data.player1,
-                            data.player3
-                        ]
-                    }),
-                    {
-                        "Content-Type": "application/json"
-                    }
-                )
-            } catch (err) {
-
-            }
-        } else if (data.player3 === "") {
-            try {
-                await sendRequest(
-                    `http://localhost:5000/api/messages/createmb`,
-                    "POST",
-                    JSON.stringify({
-                        chat: [
-                            data.player1,
-                            data.player2
+                            auth.userId
                         ]
                     }),
                     {
@@ -88,7 +71,7 @@ const MessageBoard = () => {
                         chat: [
                             data.player1,
                             data.player2,
-                            data.player3
+                            auth.userId
                         ]
                     }),
                     {

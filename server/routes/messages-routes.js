@@ -12,6 +12,8 @@ router.get("/findmb/:mbid", messageController.getMessageBoardById)
 
 router.get("/findmessenger/:mid", messageController.getMessengerByMessageId)
 
+router.get("/getuserbyemail/:ue")
+
 router.post("/createMessage", messageController.createMessage)
 
 router.post("/createmb", messageController.createMessageBoard)
