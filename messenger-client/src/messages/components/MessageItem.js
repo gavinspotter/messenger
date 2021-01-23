@@ -22,6 +22,11 @@ const MessageItem = (props) => {
                     `http://localhost:5000/api/messages/getmessages/${props.messages}`
                 )
                 setMessage(responseData.message.message)
+                const nameRD = await sendRequest(
+                    `http://localhost:5000/api/messages/findmessenger/${props.messages}`
+
+                )
+                setName(nameRD.message[0].name)
             } catch (err) {
 
             }
@@ -36,7 +41,7 @@ const MessageItem = (props) => {
             <Card>
                 <div>
 
-                    {message}
+                    {name} : {message}
                 </div>
             </Card>
         </li>

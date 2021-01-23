@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import Input from "../../shared/components/FormElements/Input"
+import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 
@@ -53,6 +55,19 @@ const MessageBoard = () => {
                     <LoadingSpinner />
                 </div>
             )}
+            <Card>
+                <form>
+                    <Input
+                        element="input"
+                    />
+                    <Input
+                        element="input"
+                    />
+                    <Input
+                        element="input"
+                    />
+                </form>
+            </Card>
             {!isLoading && loadedMb && <MbList items={loadedMb} />}
         </React.Fragment>
     )
