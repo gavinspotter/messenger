@@ -392,6 +392,15 @@ const getUserById = async (req, res, next) => {
 
     let message
 
+    try {
+        message = await Message.find({ sender: userId })
+    } catch (err) {
+        const error = new HttpError(
+            "couldnt find sender id",
+            500
+        )
+        return next(error)
+    }
 
 }
 
