@@ -410,6 +410,10 @@ const getMessengerByMessageId = async (req, res, next) => {
 
 }
 
+const getUserIDByEmail = async () => {
+
+}
+
 
 exports.getMessengerByMessageId = getMessengerByMessageId
 exports.getMessageBoardById = getMessageBoardById
