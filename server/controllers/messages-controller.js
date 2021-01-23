@@ -388,12 +388,12 @@ const getMessageBoardById = async (req, res, next) => {
 }
 
 const getMessengerByMessageId = async (req, res, next) => {
-    const userId = req.params.mid
+    const messageId = req.params.mid
 
     let message
 
     try {
-        message = await Message.find({ sender: userId })
+        message = await User.find({ messages: messageId })
     } catch (err) {
         const error = new HttpError(
             "couldnt find sender id",
