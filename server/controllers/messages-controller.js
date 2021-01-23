@@ -414,6 +414,8 @@ const getUserIDByEmail = async (req, res, next) => {
 
     const ue = req.params.ue
 
+    let user
+
     try {
 
     } catch (err) {
