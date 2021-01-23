@@ -414,7 +414,7 @@ const getUserIDByEmail = async () => {
 
 }
 
-
+exports.getUserIDByEmail = getUserIDByEmail
 exports.getMessengerByMessageId = getMessengerByMessageId
 exports.getMessageBoardById = getMessageBoardById
 exports.getMessageBoards = getMessageBoards
