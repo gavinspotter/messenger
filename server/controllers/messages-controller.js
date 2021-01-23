@@ -410,7 +410,9 @@ const getMessengerByMessageId = async (req, res, next) => {
 
 }
 
-const getUserIDByEmail = async () => {
+const getUserIDByEmail = async (req, res, next) => {
+
+    const ue = req.params.ue
 
 }
 
