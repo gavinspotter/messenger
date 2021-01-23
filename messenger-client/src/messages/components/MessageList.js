@@ -13,7 +13,7 @@ const MessageList = (props) => {
                         key={data}
                         messages={data}
                     />
-                )
+                ).reverse()
             }
         </ul>
     )
