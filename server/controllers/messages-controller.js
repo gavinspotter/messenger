@@ -428,7 +428,7 @@ const getUserIDByEmail = async (req, res, next) => {
         return next(error)
     }
 
-
+    res.json({ user })
 
 }
 
