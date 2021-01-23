@@ -7,6 +7,7 @@ import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 import { useForm } from "react-hook-form"
 import { useHttpClient } from "../../shared/hooks/http-hook"
 import MessageList from "../components/MessageList"
+import Input from "../../shared/components/FormElements/Input"
 
 const Messages = () => {
 
@@ -19,7 +20,7 @@ const Messages = () => {
     const mbId = useParams().mbId
 
 
-    const onSubmit = () => {
+    const onSubmit = async () => {
 
     }
 
@@ -71,7 +72,10 @@ const Messages = () => {
             <div>
                 <Card>
                     <form>
-
+                        <Input
+                            valRef={ }
+                            name="messages"
+                        />
                     </form>
                 </Card>
             </div>
