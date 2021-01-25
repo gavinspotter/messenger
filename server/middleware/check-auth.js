@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
 
-const HttpError = require("../models/http-error");
+const HttpError = require("../models/HttpError");
 
 module.exports = (req, res, next) => {
 
