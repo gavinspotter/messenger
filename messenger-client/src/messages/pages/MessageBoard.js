@@ -82,7 +82,16 @@ const MessageBoard = () => {
             }
         } else {
 
+            try {
+                const rdplayer1 = await sendRequest(
+                    `http://localhost:5000/api/messages/getuserbyemail/${data.player1}`
 
+                )
+
+
+            } catch (err) {
+
+            }
 
             try {
                 await sendRequest(
