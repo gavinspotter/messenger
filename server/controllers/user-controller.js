@@ -3,6 +3,7 @@ const User = require("../models/user")
 
 
 const bcrypt = require("bcryptjs")
+const jwt = require("jsonwebtoken")
 
 const getUserByEmail = async (req, res, next) => {
     const { email } = req.body
