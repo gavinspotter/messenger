@@ -58,6 +58,7 @@ const MessageBoard = () => {
                 const responseData = await sendRequest(
                     `http://localhost:5000/api/messages/getuserbyemail/${data.player1}`
                 )
+                setPlayer1(responseData.user._id)
             } catch (err) {
 
             }
@@ -68,7 +69,7 @@ const MessageBoard = () => {
                     "POST",
                     JSON.stringify({
                         chat: [
-                            data.player1,
+                            player1,
                             auth.userId
                         ]
                     }),
@@ -80,6 +81,9 @@ const MessageBoard = () => {
 
             }
         } else {
+
+
+
             try {
                 await sendRequest(
                     `http://localhost:5000/api/messages/createmb`,
