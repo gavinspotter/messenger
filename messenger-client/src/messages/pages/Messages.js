@@ -24,6 +24,8 @@ const Messages = () => {
 
     const mbId = useParams().mbId
 
+    const [clear, setClear] = useState()
+
 
     const onSubmit = async (data) => {
         try {
