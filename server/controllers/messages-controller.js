@@ -26,119 +26,135 @@ const createMessageBoard = async (req, res, next) => {
         let find1
         let find2
         let find3
-        find1 = await MessageBoard.findOne({ chat: chat[0] })
-        find2 = await MessageBoard.findOne({ chat: chat[1] })
-        find3 = await MessageBoard.findOne({ chat: chat[2] })
 
-        if ((!find1 && !find2)
-            || (!find1 && find2)
-            || (find1 && !find2)
-            || (!find1 && !find2 && !find3)
-            || (find1 && !find2 && !find3)
-            || (!find1 && !find2 && find3)
-            || (!find1 && find2 && !find3)
-            || (!find1 && find2 && find3)
-            || (find1 && !find2 && find3)
-            || (find1 && find2 && !find3)
-        ) {
-            let user1
+        // try {
+        //     find1 = await MessageBoard.findOne({ chat: chat[0] })
+        // } catch (err) {
 
-            try {
-                user1 = await User.findById(chat[0])
-            } catch (err) {
-                const error = new HttpError("couldnt find user", 500)
-                return next(error)
-            }
+        // }
 
-            if (!user1) {
-                const error = new HttpError(
-                    "there are no users",
-                    404
-                )
-                return next(error)
-            }
+        // try {
+        //     find2 = await MessageBoard.findOne({ chat: chat[1] })
+        // } catch (err) {
 
-            try {
-                await createdMessageBoard.save()
-            } catch (err) {
+        // }
 
-            }
+        // try {
+        //     find3 = await MessageBoard.findOne({ chat: chat[2] })
+        // } catch (err) {
 
-            try {
-                user1.messageboards.push(createdMessageBoard)
-            } catch (err) {
-
-            }
-
-            try {
-                await user1.save()
-            } catch (err) {
-
-            }
-
-            //
-
-            let user2
-
-            try {
-                user2 = await User.findById(chat[1])
-            } catch (err) {
-                const error = new HttpError("couldnt find user", 500)
-                return next(error)
-            }
+        // }
 
 
+        // if ((!find1 && !find2)
+        //     || (!find1 && find2)
+        //     || (find1 && !find2)
+        //     || (!find1 && !find2 && !find3)
+        //     || (find1 && !find2 && !find3)
+        //     || (!find1 && !find2 && find3)
+        //     || (!find1 && find2 && !find3)
+        //     || (!find1 && find2 && find3)
+        //     || (find1 && !find2 && find3)
+        //     || (find1 && find2 && !find3)
+        // ) {
+        let user1
 
-
-            try {
-                user2.messageboards.push(createdMessageBoard)
-            } catch (err) {
-
-            }
-
-            try {
-                await user2.save()
-            } catch (err) {
-
-            }
-
-            //
-
-            let user3
-
-
-            if (user3) {
-
-                try {
-                    user3 = await User.findById(chat[2])
-                } catch (err) {
-                    const error = new HttpError("couldnt find user", 500)
-                    return next(error)
-                }
-
-
-                try {
-                    user3.messageboards.push(createdMessageBoard)
-                } catch (err) {
-
-                }
-
-                try {
-                    await user3.save()
-                } catch (err) {
-
-                }
-            }
-
-
-
-
-
-
-        } else {
-            const error = new HttpError("this is already a chat room", 500)
+        try {
+            user1 = await User.findById(chat[0])
+        } catch (err) {
+            const error = new HttpError("couldnt find user", 500)
             return next(error)
         }
+
+        if (!user1) {
+            const error = new HttpError(
+                "there are no users",
+                404
+            )
+            return next(error)
+        }
+
+        try {
+            await createdMessageBoard.save()
+        } catch (err) {
+
+        }
+
+        try {
+            user1.messageboards.push(createdMessageBoard)
+        } catch (err) {
+
+        }
+
+        try {
+            await user1.save()
+        } catch (err) {
+
+        }
+
+        //
+
+        let user2
+
+        try {
+            user2 = await User.findById(chat[1])
+        } catch (err) {
+            const error = new HttpError("couldnt find user", 500)
+            return next(error)
+        }
+
+
+
+
+        try {
+            user2.messageboards.push(createdMessageBoard)
+        } catch (err) {
+
+        }
+
+        try {
+            await user2.save()
+        } catch (err) {
+
+        }
+
+        //
+
+        let user3
+
+
+        if (user3) {
+
+            try {
+                user3 = await User.findById(chat[2])
+            } catch (err) {
+                const error = new HttpError("couldnt find user", 500)
+                return next(error)
+            }
+
+
+            try {
+                user3.messageboards.push(createdMessageBoard)
+            } catch (err) {
+
+            }
+
+            try {
+                await user3.save()
+            } catch (err) {
+
+            }
+        }
+
+
+
+
+
+
+        // } else {
+        //     const error = new HttpError("this is already a chat room", 500)
+        //     return next(error)
+        // }
 
 
     } catch (err) {

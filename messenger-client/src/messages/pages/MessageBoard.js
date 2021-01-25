@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
-import { useParams } from "react-router-dom"
+import { useHistory, useParams } from "react-router-dom"
 import Button from "../../shared/components/FormElements/Button"
 import Input from "../../shared/components/FormElements/Input"
 import Card from "../../shared/components/UIElements/Card"
@@ -13,13 +13,14 @@ import MbList from "../components/MbList"
 
 
 
+
 const MessageBoard = () => {
 
     const auth = useContext(AuthContext)
 
     const { register, handleSubmit } = useForm()
 
-
+    const history = useHistory()
 
     const [loadedMb, setLoadedMb] = useState()
 
@@ -27,8 +28,6 @@ const MessageBoard = () => {
 
     const userId = useParams().userId
 
-    let submitVal1
-    let submitVal2
 
     const onSubmit = async (data) => {
 
@@ -41,7 +40,7 @@ const MessageBoard = () => {
 
             try {
                 const responseData = await sendRequest(
-                    `http://localhost:5000/api/messages/getuserbyemail/${data.player1}`
+                    `http://localhost:5000/api/messages/getuserbyemail/${data.player2}`
                 )
                 chatter1 = responseData.user[0]._id
             } catch (err) {
@@ -62,6 +61,7 @@ const MessageBoard = () => {
                         "Content-Type": "application/json"
                     }
                 )
+
             } catch (err) {
 
             }
@@ -90,6 +90,7 @@ const MessageBoard = () => {
                         "Content-Type": "application/json"
                     }
                 )
+
             } catch (err) {
 
             }
@@ -175,14 +176,14 @@ const MessageBoard = () => {
                         element="input"
                         valRef={register}
                         name="player1"
-                        val={ }
+                    //val={ }
 
                     />
                     <Input
                         element="input"
                         valRef={register}
                         name="player2"
-                        val={ }
+                    //val={ }
                     />
 
                     <Button>start messenging</Button>
