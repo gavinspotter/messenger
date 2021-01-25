@@ -8,6 +8,7 @@ const Input = (props) => {
             ref={props.valRef}
             type={props.type}
             defaultValue={props.dv}
+            value={props.val}
 
         />
     ) : (
@@ -15,6 +16,7 @@ const Input = (props) => {
                 rows={props.rows || 3}
                 ref={props.valRef}
                 name={props.name}
+                value={props.val}
             />
         )
 

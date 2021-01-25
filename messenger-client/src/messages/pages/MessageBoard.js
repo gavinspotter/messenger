@@ -172,6 +172,7 @@ const MessageBoard = () => {
                         element="input"
                         valRef={register}
                         name="player1"
+
                     />
                     <Input
                         element="input"
