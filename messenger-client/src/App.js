@@ -11,22 +11,11 @@ import Signup from "./user/pages/Signup"
 
 const App = () => {
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [userId, setUserId] = useState(false)
-
-  const login = useCallback((uid) => {
-    setIsLoggedIn(true)
-    setUserId(uid)
-  }, [])
-
-  const logout = useCallback(() => {
-    setIsLoggedIn(false)
-    setUserId(null)
-  }, [])
+  const { token, login, logout, userId } = useAuth();
 
   let routes
 
-  if (isLoggedIn) {
+  if (token) {
     routes = (
       <Switch>
         <Route path="/:userId/messageboards">
