@@ -6,6 +6,9 @@ const router = express.Router()
 
 const checkAuth = require('../middleware/check-auth');
 
+
+router.use(checkAuth);
+
 router.get("/messageboards/:uid", messageController.getMessageBoards)
 
 router.get("/findmb/:mbid", messageController.getMessageBoardById)
