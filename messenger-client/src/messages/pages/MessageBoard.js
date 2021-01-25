@@ -20,6 +20,10 @@ const MessageBoard = () => {
 
     const { register, handleSubmit } = useForm()
 
+    const [submitVal1, setSubmitVal1] = useState()
+    const [submitVal2, setSubmitVal2] = useState()
+
+
     const history = useHistory()
 
     const [loadedMb, setLoadedMb] = useState()
@@ -61,7 +65,7 @@ const MessageBoard = () => {
                         "Content-Type": "application/json"
                     }
                 )
-
+                history.push("/" + userId + "/messageboards")
             } catch (err) {
 
             }
@@ -90,7 +94,7 @@ const MessageBoard = () => {
                         "Content-Type": "application/json"
                     }
                 )
-
+                history.push("/" + userId + "/messageboards")
             } catch (err) {
 
             }
@@ -128,6 +132,7 @@ const MessageBoard = () => {
                         "Content-Type": "application/json"
                     }
                 )
+                history.push("/" + userId + "/messageboards")
             } catch (err) {
 
             }
