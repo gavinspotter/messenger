@@ -8,7 +8,9 @@ const checkAuth = require('../middleware/check-auth');
 
 router.get("/messageboards/:uid", messageController.getMessageBoards)
 
-router.use(checkAuth);
+
+router.get("/getuserbyemail/:ue", messageController.getUserIDByEmail)
+
 
 
 
@@ -16,16 +18,22 @@ router.get("/findmb/:mbid", messageController.getMessageBoardById)
 
 router.get("/findmessenger/:mid", messageController.getMessengerByMessageId)
 
-router.get("/getuserbyemail/:ue", messageController.getUserIDByEmail)
 
-router.post("/createMessage", messageController.createMessage)
 
-router.post("/createmb", messageController.createMessageBoard)
+
+
+
 
 router.get("/getmessages/:mid", messageController.getMessages)
 
 router.delete("/:mid")
 
+
+router.use(checkAuth);
+
+router.post("/createMessage", messageController.createMessage)
+
+router.post("/createmb", messageController.createMessageBoard)
 
 
 module.exports = router

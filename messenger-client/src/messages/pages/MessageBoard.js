@@ -59,12 +59,14 @@ const MessageBoard = () => {
                     "POST",
                     JSON.stringify({
                         chat: [
+                            auth.userId,
                             chatter1,
-                            auth.userId
+
                         ]
                     }),
                     {
-                        "Content-Type": "application/json"
+                        "Content-Type": "application/json",
+                        Authorization: 'Bearer ' + auth.token
                     }
                 )
                 setSubmitVal2("")
@@ -89,12 +91,14 @@ const MessageBoard = () => {
                     "POST",
                     JSON.stringify({
                         chat: [
+                            auth.userId,
                             chatter2,
-                            auth.userId
+
                         ]
                     }),
                     {
-                        "Content-Type": "application/json"
+                        "Content-Type": "application/json",
+                        Authorization: 'Bearer ' + auth.token
                     }
                 )
                 setSubmitVal1("")
@@ -133,7 +137,8 @@ const MessageBoard = () => {
                         ]
                     }),
                     {
-                        "Content-Type": "application/json"
+                        "Content-Type": "application/json",
+                        Authorization: 'Bearer ' + auth.token
                     }
                 )
                 setSubmitVal1("")
