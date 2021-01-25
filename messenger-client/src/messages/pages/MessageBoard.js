@@ -20,6 +20,9 @@ const MessageBoard = () => {
     const { register, handleSubmit } = useForm()
 
     const [player2, setPlayer2] = useState()
+    const [player1, setPlayer1] = useState()
+    const [player21, setPlayer21] = useState()
+    const [player11, setPlayer11] = useState()
 
     const [loadedMb, setLoadedMb] = useState()
 
