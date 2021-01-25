@@ -28,7 +28,7 @@ const MessageBoard = () => {
     const userId = useParams().userId
 
     let submitVal1
-
+    let submitVal2
 
     const onSubmit = async (data) => {
 
