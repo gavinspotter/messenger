@@ -30,7 +30,7 @@ const Messages = () => {
     const onSubmit = async (data) => {
         try {
             await sendRequest(
-                `http://localhost:5000/api/messages/createMessage`,
+                `${process.env.REACT_APP_BACKEND_URL}/messages/createMessage`,
                 "POST",
                 JSON.stringify({
                     sender: auth.userId,
@@ -43,6 +43,7 @@ const Messages = () => {
                     Authorization: 'Bearer ' + auth.token
                 }
             )
+            setClear("")
         } catch (err) {
             console.log(err)
         }
@@ -53,7 +54,7 @@ const Messages = () => {
 
             try {
                 const responseData = await sendRequest(
-                    `http://localhost:5000/api/messages/findmb/${mbId}`
+                    `${process.env.REACT_APP_BACKEND_URL}/messages/findmb/${mbId}`
                 )
                 setLoadedMessageBoard(responseData.messageboard.messages)
                 console.log(responseData.messageboard)
@@ -79,7 +80,7 @@ const Messages = () => {
 
             try {
                 const responseData = await sendRequest(
-                    `http://localhost:5000/api/messages/findmb/${mbId}`
+                    `${process.env.REACT_APP_BACKEND_URL}/messages/findmb/${mbId}`
                 )
                 setLoadedMessageBoard(responseData.messageboard.messages)
                 console.log(responseData.messageboard)
@@ -121,6 +122,7 @@ const Messages = () => {
                         <Input
                             valRef={register}
                             name="messages"
+                            val={clear}
                         />
                         <Button>message</Button>
                     </form>

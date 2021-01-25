@@ -46,7 +46,7 @@ const MessageBoard = () => {
 
             try {
                 const responseData = await sendRequest(
-                    `http://localhost:5000/api/messages/getuserbyemail/${data.player2}`
+                    `${process.env.REACT_APP_BACKEND_URL}/messages/getuserbyemail/${data.player2}`
                 )
                 chatter1 = responseData.user[0]._id
             } catch (err) {
@@ -55,7 +55,7 @@ const MessageBoard = () => {
 
             try {
                 await sendRequest(
-                    `http://localhost:5000/api/messages/createmb`,
+                    `${process.env.REACT_APP_BACKEND_URL}/messages/createmb`,
                     "POST",
                     JSON.stringify({
                         chat: [
@@ -78,7 +78,7 @@ const MessageBoard = () => {
 
             try {
                 const responseData = await sendRequest(
-                    `http://localhost:5000/api/messages/getuserbyemail/${data.player1}`
+                    `${process.env.REACT_APP_BACKEND_URL}/messages/getuserbyemail/${data.player1}`
                 )
                 chatter2 = responseData.user[0]._id
             } catch (err) {
@@ -87,7 +87,7 @@ const MessageBoard = () => {
 
             try {
                 await sendRequest(
-                    `http://localhost:5000/api/messages/createmb`,
+                    `${process.env.REACT_APP_BACKEND_URL}/messages/createmb`,
                     "POST",
                     JSON.stringify({
                         chat: [
@@ -110,12 +110,12 @@ const MessageBoard = () => {
 
             try {
                 const rdplayer1 = await sendRequest(
-                    `http://localhost:5000/api/messages/getuserbyemail/${data.player1}`
+                    `${process.env.REACT_APP_BACKEND_URL}/messages/getuserbyemail/${data.player1}`
 
                 )
                 chatter1 = rdplayer1.user[0]._id
                 const rdplayer2 = await sendRequest(
-                    `http://localhost:5000/api/messages/getuserbyemail/${data.player2}`
+                    `${process.env.REACT_APP_BACKEND_URL}/messages/getuserbyemail/${data.player2}`
 
                 )
                 chatter2 = rdplayer2.user[0]._id
@@ -126,7 +126,7 @@ const MessageBoard = () => {
 
             try {
                 await sendRequest(
-                    `http://localhost:5000/api/messages/createmb`,
+                    `${process.env.REACT_APP_BACKEND_URL}/messages/createmb`,
                     "POST",
                     JSON.stringify({
                         chat: [
@@ -160,7 +160,7 @@ const MessageBoard = () => {
         const fetchMb = async () => {
             try {
                 const responseData = await sendRequest(
-                    `http://localhost:5000/api/messages/messageboards/${userId}`,
+                    `${process.env.REACT_APP_BACKEND_URL}/messages/messageboards/${userId}`,
                 )
                 setLoadedMb(responseData.messageboards)
             } catch (err) {

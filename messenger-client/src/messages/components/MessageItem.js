@@ -19,11 +19,11 @@ const MessageItem = (props) => {
         const fetchMessages = async () => {
             try {
                 const responseData = await sendRequest(
-                    `http://localhost:5000/api/messages/getmessages/${props.messages}`
+                    `${process.env.REACT_APP_BACKEND_URL}/messages/getmessages/${props.messages}`
                 )
                 setMessage(responseData.message.message)
                 const nameRD = await sendRequest(
-                    `http://localhost:5000/api/messages/findmessenger/${props.messages}`
+                    `${process.env.REACT_APP_BACKEND_URL}/messages/findmessenger/${props.messages}`
 
                 )
                 setName(nameRD.message[0].name)

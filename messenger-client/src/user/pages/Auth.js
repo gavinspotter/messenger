@@ -28,7 +28,7 @@ const Auth = () => {
 
         try {
             const responseData = await sendRequest(
-                "http://localhost:5000/api/user/login",
+                process.env.REACT_APP_BACKEND_URL + "/user/login",
                 "POST",
                 JSON.stringify({
                     email: data.login,

@@ -19,7 +19,7 @@ const MbItem = (props) => {
         const fetchEmail = async () => {
             try {
                 const responseData = await sendRequest(
-                    `http://localhost:5000/api/user/findemail/${props.chat[0]}`
+                    `${process.env.REACT_APP_BACKEND_URL}/user/findemail/${props.chat[0]}`
                 )
                 setChat1(responseData.user.email)
             } catch (err) {
@@ -34,7 +34,7 @@ const MbItem = (props) => {
         const fetchEmail = async () => {
             try {
                 const responseData = await sendRequest(
-                    `http://localhost:5000/api/user/findemail/${props.chat[1]}`
+                    `${process.env.REACT_APP_BACKEND_URL}/user/findemail/${props.chat[1]}`
                 )
                 setChat2(responseData.user.email)
             } catch (err) {
@@ -51,7 +51,7 @@ const MbItem = (props) => {
         const fetchEmail = async () => {
             try {
                 const responseData = await sendRequest(
-                    `http://localhost:5000/api/user/findemail/${props.chat[2]}`
+                    `${process.env.REACT_APP_BACKEND_URL}/user/findemail/${props.chat[2]}`
                 )
                 setChat3(responseData.user.email)
             } catch (err) {

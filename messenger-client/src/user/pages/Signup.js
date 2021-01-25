@@ -23,7 +23,7 @@ const Signup = () => {
 
         try {
             const responseData = await sendRequest(
-                "http://localhost:5000/api/user/signup",
+                process.env.REACT_APP_BACKEND_URL + "/user/signup",
                 "POST",
                 JSON.stringify({
                     name: data.name,

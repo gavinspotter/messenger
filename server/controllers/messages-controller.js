@@ -352,6 +352,7 @@ const getMessageBoards = async (req, res, next) => {
 
 
 
+
     let messageboards
 
     try {
@@ -363,6 +364,8 @@ const getMessageBoards = async (req, res, next) => {
         )
         return next(error)
     }
+
+
 
     //messageboards.find(stuff => stuff === chatuser)
 
