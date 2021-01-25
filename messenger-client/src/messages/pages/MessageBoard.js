@@ -92,6 +92,7 @@ const MessageBoard = () => {
                     `http://localhost:5000/api/messages/getuserbyemail/${data.player2}`
 
                 )
+                setPlayer21(rdplayer2.user._id)
 
             } catch (err) {
 
@@ -103,8 +104,8 @@ const MessageBoard = () => {
                     "POST",
                     JSON.stringify({
                         chat: [
-                            data.player1,
-                            data.player2,
+                            player11,
+                            player21,
                             auth.userId
                         ]
                     }),
