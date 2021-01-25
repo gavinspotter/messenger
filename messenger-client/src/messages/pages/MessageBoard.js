@@ -33,6 +33,8 @@ const MessageBoard = () => {
     const userId = useParams().userId
 
 
+
+
     const onSubmit = async (data) => {
 
         let chatter1
@@ -65,6 +67,7 @@ const MessageBoard = () => {
                         "Content-Type": "application/json"
                     }
                 )
+                setSubmitVal2("")
                 history.push("/" + userId + "/messageboards")
             } catch (err) {
 
@@ -94,6 +97,7 @@ const MessageBoard = () => {
                         "Content-Type": "application/json"
                     }
                 )
+                setSubmitVal1("")
                 history.push("/" + userId + "/messageboards")
             } catch (err) {
 
@@ -132,6 +136,8 @@ const MessageBoard = () => {
                         "Content-Type": "application/json"
                     }
                 )
+                setSubmitVal1("")
+                setSubmitVal2("")
                 history.push("/" + userId + "/messageboards")
             } catch (err) {
 
@@ -181,14 +187,14 @@ const MessageBoard = () => {
                         element="input"
                         valRef={register}
                         name="player1"
-                    //val={ }
+                        val={submitVal1}
 
                     />
                     <Input
                         element="input"
                         valRef={register}
                         name="player2"
-                    //val={ }
+                        val={submitVal2}
                     />
 
                     <Button>start messenging</Button>
