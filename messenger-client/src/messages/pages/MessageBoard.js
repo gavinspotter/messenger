@@ -19,6 +19,8 @@ const MessageBoard = () => {
 
     const { register, handleSubmit } = useForm()
 
+    const [player2, setPlayer2] = useState()
+
     const [loadedMb, setLoadedMb] = useState()
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
@@ -26,6 +28,9 @@ const MessageBoard = () => {
     const userId = useParams().userId
 
     const onSubmit = async (data) => {
+
+
+
         if (data.player1 === "") {
             try {
                 await sendRequest(
@@ -45,6 +50,15 @@ const MessageBoard = () => {
 
             }
         } else if (data.player2 === "") {
+
+            try {
+                const responseData = await sendRequest(
+                    `http://localhost:5000/api/messages/getuserbyemail/${data.player1}`
+                )
+            } catch (err) {
+
+            }
+
             try {
                 await sendRequest(
                     `http://localhost:5000/api/messages/createmb`,
