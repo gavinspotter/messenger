@@ -19,10 +19,7 @@ const MessageBoard = () => {
 
     const { register, handleSubmit } = useForm()
 
-    const [player2, setPlayer2] = useState()
-    const [player1, setPlayer1] = useState()
-    const [player21, setPlayer21] = useState()
-    const [player11, setPlayer11] = useState()
+
 
     const [loadedMb, setLoadedMb] = useState()
 
@@ -32,16 +29,29 @@ const MessageBoard = () => {
 
     const onSubmit = async (data) => {
 
+        let chatter1
+        let chatter2
+
 
 
         if (data.player1 === "") {
+
+            try {
+                const responseData = await sendRequest(
+                    `http://localhost:5000/api/messages/getuserbyemail/${data.player1}`
+                )
+                chatter1 = responseData.user[0]._id
+            } catch (err) {
+
+            }
+
             try {
                 await sendRequest(
                     `http://localhost:5000/api/messages/createmb`,
                     "POST",
                     JSON.stringify({
                         chat: [
-                            data.player2,
+                            chatter1,
                             auth.userId
                         ]
                     }),
@@ -58,7 +68,7 @@ const MessageBoard = () => {
                 const responseData = await sendRequest(
                     `http://localhost:5000/api/messages/getuserbyemail/${data.player1}`
                 )
-                setPlayer1(responseData.user._id)
+                chatter2 = responseData.user[0]._id
             } catch (err) {
 
             }
@@ -69,7 +79,7 @@ const MessageBoard = () => {
                     "POST",
                     JSON.stringify({
                         chat: [
-                            player1,
+                            chatter2,
                             auth.userId
                         ]
                     }),
@@ -87,12 +97,12 @@ const MessageBoard = () => {
                     `http://localhost:5000/api/messages/getuserbyemail/${data.player1}`
 
                 )
-                setPlayer11(rdplayer1.user._id)
+                chatter1 = rdplayer1.user[0]._id
                 const rdplayer2 = await sendRequest(
                     `http://localhost:5000/api/messages/getuserbyemail/${data.player2}`
 
                 )
-                setPlayer21(rdplayer2.user._id)
+                chatter2 = rdplayer2.user[0]._id
 
             } catch (err) {
 
@@ -104,9 +114,10 @@ const MessageBoard = () => {
                     "POST",
                     JSON.stringify({
                         chat: [
-                            player11,
-                            player21,
-                            auth.userId
+                            auth.userId,
+                            chatter1,
+                            chatter2,
+
                         ]
                     }),
                     {
