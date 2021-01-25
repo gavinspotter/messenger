@@ -27,6 +27,9 @@ const MessageBoard = () => {
 
     const userId = useParams().userId
 
+    let submitVal1
+
+
     const onSubmit = async (data) => {
 
         let chatter1
@@ -172,12 +175,14 @@ const MessageBoard = () => {
                         element="input"
                         valRef={register}
                         name="player1"
+                        val={ }
 
                     />
                     <Input
                         element="input"
                         valRef={register}
                         name="player2"
+                        val={ }
                     />
 
                     <Button>start messenging</Button>
