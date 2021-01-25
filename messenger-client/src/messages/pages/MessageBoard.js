@@ -87,7 +87,11 @@ const MessageBoard = () => {
                     `http://localhost:5000/api/messages/getuserbyemail/${data.player1}`
 
                 )
+                setPlayer11(rdplayer1.user._id)
+                const rdplayer2 = await sendRequest(
+                    `http://localhost:5000/api/messages/getuserbyemail/${data.player2}`
 
+                )
 
             } catch (err) {
 
