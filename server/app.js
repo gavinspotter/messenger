@@ -11,6 +11,9 @@ const app = express()
 
 app.use(bodyParser.json())
 
+
+app.use(express.static(path.join('public')))
+
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
 
@@ -31,10 +34,10 @@ app.use("/api/user", userRoutes)
 app.use("/api/messages", messageRoutes)
 
 
-app.use((req, res, next) => {
-    const error = new HttpError("could not find this route", 404);
-    throw error;
-});
+// app.use((req, res, next) => {
+//     const error = new HttpError("could not find this route", 404);
+//     throw error;
+// });
 
 
 app.use((error, req, res, next) => {
