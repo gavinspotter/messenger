@@ -4,7 +4,7 @@ const messageController = require("../controllers/messages-controller")
 
 const router = express.Router()
 
-
+const checkAuth = require('../middleware/check-auth');
 
 router.get("/messageboards/:uid", messageController.getMessageBoards)
 
