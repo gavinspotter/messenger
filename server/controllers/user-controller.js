@@ -108,7 +108,7 @@ const signup = async (req, res, next) => {
         return next(error);
     }
 
-    res.status(201).json({ user: createdUser.toObject({ getters: true }) })
+    res.status(201).json({ userId: createdUser.id, email: createdUser.email, token: token })
 
 
 
