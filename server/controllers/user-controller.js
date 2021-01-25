@@ -132,6 +132,7 @@ const login = async (req, res, next) => {
         )
         return next(error)
     }
+    let isValidPassword = false;
 
     res.json({
         message: "logged in",
