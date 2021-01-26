@@ -64,6 +64,7 @@ const Auth = () => {
                         valRef={register}
                         label="password"
                         element="input"
+                        type="password"
                     />
                     did you mean to <Link to="/signup"> signup </Link> <br />
                     <Button type="submit">login</Button>
