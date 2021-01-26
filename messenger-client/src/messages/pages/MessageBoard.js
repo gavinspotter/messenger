@@ -187,6 +187,7 @@ const MessageBoard = () => {
                 </div>
             )}
             <Card>
+                <h2>type in an email or two</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <Input
                         element="input"
