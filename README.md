@@ -55,8 +55,23 @@ react-hook-form is used to handle form inputs.
 
 react-router-dom is used to handle routing with components like route, router, switch
 
+## database
 
+user has many messages
 
+user has many message boards
+
+message board has many users
+
+message board has many messages
+
+message has one sender
+
+message has one message board
+
+## bio
 
 the messenger i created was one of the toughest problems i solved as a young developer coder. In fact i am still working on this project. People can send messages back and forth to one or even two people at a time in schemas called message boards.
-message boards contain the object id per mongodb or object id's of the users participating in certain message boards.  
+message boards contain the object id per mongodb or object id's of the users participating in certain message boards. they also contain the object id's of all the messages sent in the message board.
+
+
