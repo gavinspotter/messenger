@@ -49,9 +49,11 @@ react-dom is used to import custom hooks to the document object modal.
 
 #### react-hook-form
 
-react-hook-form is used to handle form inputs 
+react-hook-form is used to handle form inputs.
 
+#### react-router-dom
 
+react-router-dom is used to handle routing with components like route, router, switch
 
 
 the messenger i created was one of the toughest problems i solved as a young developer coder. In fact i am still working on this project. People can send messages back and forth to one or even two people at a time in schemas called message boards.
