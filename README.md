@@ -3,6 +3,7 @@
 
 ## packages
 
+
 ### server side packages 
 server side packages include ... bcryptjs, body-parser, express, jsonwebtoken, mongoose, mongoose-unique-validator, and nodemon.
 
@@ -35,7 +36,6 @@ mongoose-unique-validator is used to create unique validators in the mongoose sc
 nodemon is used in development to start the server and have it automatically update upon saving in vs code.
 
 
-
 ### client side packages
 client side packages include ... react, react-dom, react-hook-form, and react-router-dom.
 
@@ -46,6 +46,11 @@ react is used to process things like jsx.
 #### react-dom
 
 react-dom is used to import custom hooks to the document object modal.
+
+#### react-hook-form
+
+react-hook-form is used to handle form inputs 
+
 
 
 
