@@ -4,7 +4,7 @@
 ## packages
 
 ### server side packages 
-server side packages include ... bcryptjs, body-parser, express, jsonwebtoken, mongoose, mongoose-unique-validator, and node mon.
+server side packages include ... bcryptjs, body-parser, express, jsonwebtoken, mongoose, mongoose-unique-validator, and nodemon.
 
 #### bcryptjs
 
@@ -29,6 +29,11 @@ mongoose is used to create schemas in our models folder for the database and to 
 #### mongoose-unique-validator
 
 mongoose-unique-validator is used to create unique validators in the mongoose schema.
+
+#### nodemon
+
+nodemon is used in development to start the server and have it automatically update upon saving in vs code.
+
 
 
 
