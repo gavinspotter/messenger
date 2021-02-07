@@ -41,7 +41,7 @@ client side packages include ... react, react-dom, react-hook-form, and react-ro
 
 #### react
 
-react is used to process things like jsx.
+react is used to process things like jsx, context, and hooks
 
 #### react-dom
 
@@ -54,6 +54,8 @@ react-hook-form is used to handle form inputs.
 #### react-router-dom
 
 react-router-dom is used to handle routing with components like route, router, switch
+
+
 
 
 the messenger i created was one of the toughest problems i solved as a young developer coder. In fact i am still working on this project. People can send messages back and forth to one or even two people at a time in schemas called message boards.
