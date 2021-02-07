@@ -36,9 +36,16 @@ nodemon is used in development to start the server and have it automatically upd
 
 
 
-
 ### client side packages
 client side packages include ... react, react-dom, react-hook-form, and react-router-dom.
+
+#### react
+
+react is used to process things like jsx.
+
+#### react-dom
+
+react-dom is used to import custom hooks to the document object modal.
 
 
 
