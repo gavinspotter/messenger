@@ -4,15 +4,15 @@
 ## packages
 
 ### server side packages 
-server side packages include ... bcryptjs, body-parser, express, jsonwebtoken, mongoose, mongoose-unique-validator, and node mon
+server side packages include ... bcryptjs, body-parser, express, jsonwebtoken, mongoose, mongoose-unique-validator, and node mon.
 
 #### bcryptjs
 
-bcryptjs used to hash or encrypt passwords so people accessing the database aren't able to hack into accounts with the users chosen password
+bcryptjs used to hash or encrypt passwords so people accessing the database aren't able to hack into accounts with the users chosen password.
 
 #### body-parser
 
-body-parser is used as a middleware
+body-parser is used as a middleware.
 
 #### express
 
@@ -24,10 +24,16 @@ jsonwebtoken is used to provide authentication to a user who is logged in and al
 
 #### mongoose 
 
-mongoose is used to create schemas in our models folder for the database and to connect to the database in our app.js
+mongoose is used to create schemas in our models folder for the database and to connect to the database in our app.js.
+
+#### mongoose-unique-validator
+
+mongoose-unique-validator is used to create unique validators in the mongoose schema.
+
+
 
 ### client side packages
-client side packages include ... react, react-dom, react-hook-form, and react-router-dom
+client side packages include ... react, react-dom, react-hook-form, and react-router-dom.
 
 
 
