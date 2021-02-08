@@ -71,5 +71,9 @@ message has one sender
 
 message has one message board
 
+## side notes:
+
+I implemented http errors
+
 
 
