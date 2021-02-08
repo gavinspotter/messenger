@@ -73,7 +73,5 @@ message has one message board
 
 ## side notes:
 
-I implemented http errors
-
-
+I implemented http errors (REST)
 
