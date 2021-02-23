@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+.section-features {
+  background-image: linear-gradient(to right bottom, #00ebfc, #1760fd);
+  height: 100vh;
+  position: relative;
+  background-size: cover; }
