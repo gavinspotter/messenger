@@ -2,10 +2,10 @@ import React from 'react'
 
 import "../../css/style.css"
 
-const SassHome = () => {
+const SassHome = (props) => {
     return (
-        <div>
-
+        <div className="home">
+            {props.children}
         </div>
     )
 }
