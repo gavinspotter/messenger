@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom"
 import MessageBoard from "./messages/pages/MessageBoard"
 import Messages from "./messages/pages/Messages"
 import MainNavigation from "./shared/components/navigation/MainNavigation"
@@ -35,6 +35,7 @@ const App = () => {
         <Route path="/signup">
           <Signup />
         </Route>
+        <Redirect path="/auth" />
       </Switch>
     )
   }
