@@ -7,6 +7,7 @@ import MainNavigation from "./shared/components/navigation/MainNavigation"
 import { AuthContext } from "./shared/context/auth-context"
 import { useAuth } from './shared/hooks/auth-hook';
 import Auth from "./user/pages/Auth"
+import SassHome from "./user/pages/SassHome"
 import Signup from "./user/pages/Signup"
 
 const App = () => {
@@ -46,8 +47,9 @@ const App = () => {
     >
 
       <Router>
-
-        <main>{routes}</main>
+        <SassHome>
+          {routes}
+        </SassHome>
       </Router>
 
 

@@ -9,7 +9,7 @@ html {
   font-size: 62.5%; }
 
 .home {
-  background-image: linear-gradient(to right bottom, #00ebfc, #1760fd);
+  background-image: linear-gradient(to right bottom, #00fcd2, #1760fd);
   height: 100vh;
   position: relative;
   background-size: cover; }
