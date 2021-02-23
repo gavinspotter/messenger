@@ -35,7 +35,7 @@ const App = () => {
         <Route path="/signup">
           <Signup />
         </Route>
-        <Redirect path="/auth" />
+        <Redirect to="/auth" />
       </Switch>
     )
   }
@@ -46,7 +46,7 @@ const App = () => {
     >
 
       <Router>
-        <MainNavigation />
+
         <main>{routes}</main>
       </Router>
 
