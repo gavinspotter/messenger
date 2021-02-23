@@ -15,6 +15,17 @@ body {
   line-height: 1.7;
   color: #777; }
 
+.auth__card {
+  position: absolute;
+  right: 45rem;
+  top: 10rem;
+  width: 40rem;
+  height: 40rem;
+  display: inline-block;
+  text-align: center;
+  background: #fff;
+  border-radius: 100%; }
+
 .home {
   background-image: linear-gradient(to right bottom, #00fcd2, #1760fd);
   height: 100vh;
