@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom"
 import MessageBoard from "./messages/pages/MessageBoard"
 import Messages from "./messages/pages/Messages"
@@ -11,6 +11,8 @@ import SassHome from "./user/pages/SassHome"
 import Signup from "./user/pages/Signup"
 
 const App = () => {
+
+  const auth = useContext(AuthContext)
 
   const { token, login, logout, userId } = useAuth();
 
@@ -25,6 +27,7 @@ const App = () => {
         <Route path="/:mbId/messageboard">
           <Messages />
         </Route>
+        <Redirect to={`/${userId}/messageboards`} />
       </Switch>
     )
   } else {
