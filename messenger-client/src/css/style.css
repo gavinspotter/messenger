@@ -19,12 +19,15 @@ body {
   position: absolute;
   right: 45rem;
   top: 10rem;
+  text-transform: uppercase;
   width: 40rem;
   height: 40rem;
   display: inline-block;
   text-align: center;
   background: #fff;
   border-radius: 100%; }
+  .auth__card-text {
+    margin-top: 10rem; }
 
 .home {
   background-image: url(../img/letters.jpg);
