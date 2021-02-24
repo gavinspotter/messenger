@@ -12,7 +12,7 @@ import Signup from "./user/pages/Signup"
 
 const App = () => {
 
-  const auth = useContext(AuthContext)
+
 
   const { token, login, logout, userId } = useAuth();
 
