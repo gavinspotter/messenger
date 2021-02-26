@@ -30,16 +30,17 @@ body {
     margin-top: 10rem; }
 
 .mb__card {
-  position: absolute;
-  right: 45rem;
-  top: 10rem;
+  margin-left: 45rem;
+  margin-top: 5rem;
   text-transform: uppercase;
   width: 40rem;
-  height: 40rem;
+  height: 20rem;
   display: inline-block;
   text-align: center;
   background: #fff;
   border-radius: 5%; }
+  .mb__card-text {
+    margin-top: 2rem; }
 
 .home {
   background-image: url(../img/letters.jpg);

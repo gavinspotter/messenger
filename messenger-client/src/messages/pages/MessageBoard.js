@@ -191,7 +191,7 @@ const MessageBoard = () => {
                     <LoadingSpinner />
                 </div>
             )}
-            <Card>
+            <div className="mb__card">
                 <h2>type in an email or two</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <Input
@@ -210,7 +210,7 @@ const MessageBoard = () => {
 
                     <Button>start messenging</Button>
                 </form>
-            </Card>
+            </div>
             {!isLoading && loadedMb && <MbList items={loadedMb} />}
         </React.Fragment>
     )

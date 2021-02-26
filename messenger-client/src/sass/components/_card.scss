@@ -18,17 +18,20 @@
 
 .mb__card{
 
-    position: absolute;
-    right:45rem;
-    top: 10rem;
+    
+    margin-left:45rem;
+    margin-top: 5rem;
     text-transform: uppercase;
     width:40rem;
-    height:40rem;
+    height:20rem;
     display: inline-block;
     text-align: center;
     background: $color-white;
     border-radius: 5%;
 
 
-    &-text{}
+    &-text{
+
+        margin-top: 2rem
+    }
 }
