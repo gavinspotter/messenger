@@ -73,10 +73,16 @@ const MbItem = (props) => {
 
         <Link to={`/${props._id}/messageboard`}>
             <div className="mb__listitem">
-                <div>
-                    {chat1}<br />
-                    {chat2}<br />
-                    {chat3}
+                <div className="mb__listitemdiv">
+                    <div>
+                        {chat1}<br className="mb__listitem-email" />
+                    </div>
+                    <div className="mb__listitem-email">
+                        {chat2}<br />
+                    </div>
+                    <div className="mb__listitem-email">
+                        {chat3}</div>
+
 
                 </div>
             </div>
