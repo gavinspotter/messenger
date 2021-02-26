@@ -1,7 +1,7 @@
 import React from "react"
 import MessageItem from "./MessageItem"
 
-import "./MessageList.css"
+
 import "../../css/style.css"
 
 const MessageList = (props) => {

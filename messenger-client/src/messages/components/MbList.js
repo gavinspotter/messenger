@@ -2,10 +2,12 @@ import React from "react"
 import MbItem from "./MbItem"
 import "./MbList.css"
 
+import "../../css/style.css"
+
 const MbList = (props) => {
 
     return (
-        <ul className="mb-list">
+        <ul className="mb__list">
 
             { props.items.map((stuff) =>
 
