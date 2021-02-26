@@ -186,8 +186,9 @@ const MessageBoard = () => {
     return (
         <React.Fragment>
             <div className="logout">
-
-                logout</div>
+                <div className="logout-text">
+                    logout
+                </div></div>
             <ErrorModal error={error} onClear={clearError} />
             {isLoading && (
                 <div>
