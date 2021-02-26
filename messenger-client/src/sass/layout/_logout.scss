@@ -1,9 +1,15 @@
 .logout{
-         position:fixed;
+        position:fixed;
+        width: 8rem;
+        height: 8rem;
         top:6rem;
         right: 6rem;
-        border-radius: 50%;
+        border-radius: 100%;
         z-index: 2000;
-        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        box-shadow: 0 1rem 3rem rgba($color-black, .5);
         text-align: center;
+        
+        &-text{
+            margin-top: 3rem;
+        }
 }
