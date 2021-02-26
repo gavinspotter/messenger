@@ -62,6 +62,10 @@ body {
   border-radius: 5%;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   background-color: #fff; }
+  .mb__listitem-email {
+    padding: 3rem; }
+    .mb__listitem-email:first-child {
+      margin-top: 1rem; }
 
 .logout {
   position: fixed;

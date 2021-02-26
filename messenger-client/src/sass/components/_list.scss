@@ -17,6 +17,10 @@
     background-color: $color-white;
 
     &-email{
-        
+        &:first-child{
+            margin-top: 1rem;
+        }
+        padding: 3rem;
+
     }
 }
