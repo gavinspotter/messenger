@@ -69,9 +69,10 @@ const MbItem = (props) => {
 
 
     return (
-        <li className="mb__listitem">
-            <Card> <Link to={`/${props._id}/messageboard`}>
-                <div>
+        <li >
+
+            <Link to={`/${props._id}/messageboard`}>
+                <div className="mb__listitem">
                     <div>
                         {chat1}<br />
                         {chat2}<br />
@@ -80,7 +81,7 @@ const MbItem = (props) => {
                     </div>
                 </div>
             </Link>
-            </Card>
+
 
         </li>
     )
