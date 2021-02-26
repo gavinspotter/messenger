@@ -31,7 +31,7 @@ const MessageBoard = () => {
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
-    const userId = useParams().userId
+
 
 
 
@@ -171,9 +171,7 @@ const MessageBoard = () => {
         fetchMb()
     }, [sendRequest, auth.userId])
 
-    useEffect(() => {
 
-    }, [sendRequest, userId])
 
 
 
@@ -187,7 +185,7 @@ const MessageBoard = () => {
         <React.Fragment>
             <div className="logout">
                 <div className="logout-text">
-                    <button onClick={auth.logout}>logout</button>
+                    <button className="logout__button" onClick={auth.logout}>logout</button>
                 </div></div>
             <ErrorModal error={error} onClear={clearError} />
             {isLoading && (

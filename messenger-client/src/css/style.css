@@ -16,7 +16,8 @@ body {
   color: #777; }
 
 .logout__button {
-  border: none; }
+  border: none;
+  background: none; }
 
 .auth__card {
   position: absolute;
