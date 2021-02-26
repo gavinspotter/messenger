@@ -187,7 +187,7 @@ const MessageBoard = () => {
         <React.Fragment>
             <div className="logout">
                 <div className="logout-text">
-                    logout
+                    <button onClick={auth.logout}>logout</button>
                 </div></div>
             <ErrorModal error={error} onClear={clearError} />
             {isLoading && (
