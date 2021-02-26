@@ -16,18 +16,22 @@ const App = () => {
 
   const { token, login, logout, userId } = useAuth();
 
+
+
   let routes
 
   if (token) {
     routes = (
       <Switch>
-        <Route path="/:userId/messageboards">
+        <Route path="/" exact>
           <MessageBoard />
         </Route>
-        <Route path="/:mbId/messageboard">
+        <Route path="/:mbId/messageboard" exact>
           <Messages />
         </Route>
-        <Redirect to={`/${userId}/messageboards`} />
+
+        <Redirect to="/" exact />
+
       </Switch>
     )
   } else {

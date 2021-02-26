@@ -71,7 +71,7 @@ const MessageBoard = () => {
                     }
                 )
                 setSubmitVal2("")
-                history.push("/" + userId + "/messageboards")
+                history.push("/")
             } catch (err) {
 
             }
@@ -103,7 +103,7 @@ const MessageBoard = () => {
                     }
                 )
                 setSubmitVal1("")
-                history.push("/" + userId + "/messageboards")
+                history.push("/")
             } catch (err) {
 
             }
@@ -144,7 +144,7 @@ const MessageBoard = () => {
                 )
                 setSubmitVal1("")
                 setSubmitVal2("")
-                history.push("/" + userId + "/messageboards")
+                history.push("/")
             } catch (err) {
 
             }
@@ -161,7 +161,7 @@ const MessageBoard = () => {
         const fetchMb = async () => {
             try {
                 const responseData = await sendRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/messages/messageboards/${userId}`,
+                    `${process.env.REACT_APP_BACKEND_URL}/messages/messageboards/${auth.userId}`,
                 )
                 setLoadedMb(responseData.messageboards)
             } catch (err) {
@@ -169,6 +169,10 @@ const MessageBoard = () => {
             }
         }
         fetchMb()
+    }, [sendRequest, auth.userId])
+
+    useEffect(() => {
+
     }, [sendRequest, userId])
 
 
