@@ -192,24 +192,26 @@ const MessageBoard = () => {
                 </div>
             )}
             <div className="mb__card">
-                <h2>type in an email or two</h2>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <Input
-                        element="input"
-                        valRef={register}
-                        name="player1"
-                        val={submitVal1}
+                <div className="mb__card-text">
+                    <h2>type in an email or two</h2>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <Input
+                            element="input"
+                            valRef={register}
+                            name="player1"
+                            val={submitVal1}
 
-                    />
-                    <Input
-                        element="input"
-                        valRef={register}
-                        name="player2"
-                        val={submitVal2}
-                    />
+                        />
+                        <Input
+                            element="input"
+                            valRef={register}
+                            name="player2"
+                            val={submitVal2}
+                        />
 
-                    <Button>start messenging</Button>
-                </form>
+                        <Button>start messenging</Button>
+                    </form>
+                </div>
             </div>
             {!isLoading && loadedMb && <MbList items={loadedMb} />}
         </React.Fragment>
