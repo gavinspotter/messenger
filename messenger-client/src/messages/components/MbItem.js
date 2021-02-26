@@ -69,21 +69,20 @@ const MbItem = (props) => {
 
 
     return (
-        <li >
 
-            <Link to={`/${props._id}/messageboard`}>
-                <div className="mb__listitem">
-                    <div>
-                        {chat1}<br />
-                        {chat2}<br />
-                        {chat3}
 
-                    </div>
+        <Link to={`/${props._id}/messageboard`}>
+            <div className="mb__listitem">
+                <div>
+                    {chat1}<br />
+                    {chat2}<br />
+                    {chat3}
+
                 </div>
-            </Link>
+            </div>
+        </Link>
 
 
-        </li>
     )
 }
 

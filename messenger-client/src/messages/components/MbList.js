@@ -7,8 +7,8 @@ import "../../css/style.css"
 const MbList = (props) => {
 
     return (
-        <ul className="mb__list">
 
+        <div>
             { props.items.map((stuff) =>
 
                 <MbItem
@@ -19,7 +19,8 @@ const MbList = (props) => {
             )
 
             }
-        </ul>
+        </div>
+
     )
 }
 
