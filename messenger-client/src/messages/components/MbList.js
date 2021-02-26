@@ -1,6 +1,6 @@
 import React from "react"
 import MbItem from "./MbItem"
-import "./MbList.css"
+
 
 import "../../css/style.css"
 
