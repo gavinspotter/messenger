@@ -16,11 +16,12 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
     background-color: $color-white;
 
+    &div{&:first-child{
+        margin-top: 1rem;
+    }}
     &-email{
-        &:first-child{
-            margin-top: 1rem;
-        }
-        padding: 3rem;
+        
+        padding: 1rem;
 
     }
 }
