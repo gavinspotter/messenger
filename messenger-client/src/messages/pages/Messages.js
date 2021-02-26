@@ -11,6 +11,8 @@ import Input from "../../shared/components/FormElements/Input"
 import { AuthContext } from "../../shared/context/auth-context"
 import Button from "../../shared/components/FormElements/Button"
 
+import "../../css/style.css"
+
 const Messages = () => {
 
 
