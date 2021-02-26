@@ -15,6 +15,9 @@ body {
   line-height: 1.7;
   color: #777; }
 
+.logout__button {
+  border: none; }
+
 .auth__card {
   position: absolute;
   right: 45rem;
