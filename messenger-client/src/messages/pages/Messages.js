@@ -119,7 +119,7 @@ const Messages = () => {
                 </div>
             )}
             <div>
-                <Card>
+                <div>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Input
                             valRef={register}
@@ -128,7 +128,7 @@ const Messages = () => {
                         />
                         <Button>message</Button>
                     </form>
-                </Card>
+                </div>
             </div>
             {!isLoading && loadedMessageBoard && <MessageList stuff={loadedMessageBoard} />}
         </React.Fragment>
