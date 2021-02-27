@@ -30,7 +30,7 @@ body {
   text-align: center;
   background: #fff;
   border-radius: 100%;
-  border: 2rem; }
+  border: 1rem solid; }
   .auth__card-text {
     margin-top: 10rem; }
 
