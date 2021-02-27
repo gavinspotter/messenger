@@ -59,8 +59,15 @@
 
 .message__card{
     max-width: 40rem;
-    height:auto;
+    height: auto ;
     margin-left:48rem;
-    background-color: $color-white;
+    background-color: #fff;
     border-radius: 5%;
+    margin-top: 2rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    
+    &-text{
+        padding: 1rem;
+    }
+    
 }

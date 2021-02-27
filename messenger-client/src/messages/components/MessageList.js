@@ -7,7 +7,7 @@ import "../../css/style.css"
 const MessageList = (props) => {
 
     return (
-        <ul className="mb__list">
+        <div>
             {
                 props.stuff.map((data) =>
                     <MessageItem
@@ -16,7 +16,7 @@ const MessageList = (props) => {
                     />
                 ).reverse()
             }
-        </ul>
+        </div>
     )
 }
 

@@ -67,7 +67,11 @@ body {
   height: auto;
   margin-left: 48rem;
   background-color: #fff;
-  border-radius: 5%; }
+  border-radius: 5%;
+  margin-top: 2rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+  .message__card-text {
+    padding: 1rem; }
 
 .mb__listitem {
   text-decoration: none;

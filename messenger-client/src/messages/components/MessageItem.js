@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import Card from "../../shared/components/UIElements/Card"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
+import "../../css/style.css"
 
 
 const MessageItem = (props) => {
@@ -37,14 +38,14 @@ const MessageItem = (props) => {
 
 
     return (
-        <li className="mb-item">
-            <Card>
-                <div>
 
-                    {name} : {message}
-                </div>
-            </Card>
-        </li>
+        <div className="message__card">
+            <div className="message__card-text">
+
+                {name} : {message}
+            </div>
+        </div>
+
     )
 }
 
