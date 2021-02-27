@@ -113,14 +113,16 @@ const Messages = () => {
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
-            {isLoading && (
-                <div>
-                    <LoadingSpinner />
-                </div>
-            )}
+
             <div>
                 <div className="messenger__card">
                     <div className="messenger__card-text">
+                        {isLoading && (
+                            <div>
+                                <LoadingSpinner />
+                            </div>
+                        )}
+                        <h2>send a message</h2>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <Input
                                 valRef={register}
