@@ -1,4 +1,5 @@
 import React, { useContext } from "react"
+
 import { useForm } from "react-hook-form"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import Card from "../../shared/components/UIElements/Card"
@@ -8,6 +9,8 @@ import { useHttpClient } from "../../shared/hooks/http-hook"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 import Input from "../../shared/components/FormElements/Input"
 import Button from "../../shared/components/FormElements/Button"
+import "../../css/style.css"
+import { Link } from "react-router-dom"
 
 
 
@@ -45,6 +48,7 @@ const Signup = () => {
             <ErrorModal error={error} onClear={clearError} />
             <div className="auth__card">
                 <div className="auth__card-text">
+                    <h2>please signup</h2>
                     {isLoading && <LoadingSpinner asOverylay />}
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Input
@@ -67,6 +71,7 @@ const Signup = () => {
                             element="input"
                             type="password"
                         />
+                        did you mean to <Link to="/login"> login </Link> <br />
                         <Button type="submit">
                             submit
                     </Button>
