@@ -119,15 +119,17 @@ const Messages = () => {
                 </div>
             )}
             <div>
-                <div>
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <Input
-                            valRef={register}
-                            name="messages"
-                            val={clear}
-                        />
-                        <Button>message</Button>
-                    </form>
+                <div className="messenger__card">
+                    <div>
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <Input
+                                valRef={register}
+                                name="messages"
+                                val={clear}
+                            />
+                            <Button>message</Button>
+                        </form>
+                    </div>
                 </div>
             </div>
             {!isLoading && loadedMessageBoard && <MessageList stuff={loadedMessageBoard} />}
