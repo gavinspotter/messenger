@@ -86,9 +86,11 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   background-color: #fff; }
   .mb__listitemdiv:first-child {
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    color: #777; }
   .mb__listitem-email {
-    padding: 1rem; }
+    padding: 1rem;
+    color: #777; }
 
 .logout {
   position: fixed;
@@ -102,7 +104,11 @@ body {
   text-align: center; }
   .logout-text {
     margin-top: 2rem;
-    font-size: 2rem; }
+    font-size: 2rem;
+    color: #777; }
+  .logout__button {
+    font-size: 2rem;
+    color: #777; }
 
 .back {
   position: fixed;
@@ -116,7 +122,8 @@ body {
   text-align: center; }
   .back-text {
     margin-top: 2rem;
-    font-size: 2rem; }
+    font-size: 2rem;
+    color: #777; }
 
 .home {
   background-image: url(../img/letters.jpg);

@@ -9,9 +9,17 @@
         box-shadow: 0 1rem 3rem rgba($color-black, .5);
         text-align: center;
         
+        
         &-text{
             margin-top: 2rem;
             font-size: 2rem;
+            color: $color-grey-dark;
+            
+        }
+
+        &__button{
+            font-size: 2rem;
+            color: $color-grey-dark
         }
 }
 
@@ -29,5 +37,6 @@
         &-text{
             margin-top: 2rem;
             font-size: 2rem;
+            color: $color-grey-dark;
         }
 }

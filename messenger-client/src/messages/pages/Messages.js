@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
@@ -113,7 +113,13 @@ const Messages = () => {
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
-
+            <Link to="/">
+                <div className="back">
+                    <div className="back-text">
+                        back
+                </div>
+                </div>
+            </Link>
             <div>
                 <div className="messenger__card">
                     <div className="messenger__card-text">
