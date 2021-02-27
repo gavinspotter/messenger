@@ -120,7 +120,7 @@ const Messages = () => {
             )}
             <div>
                 <div className="messenger__card">
-                    <div>
+                    <div className="messenger__card-text">
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <Input
                                 valRef={register}
