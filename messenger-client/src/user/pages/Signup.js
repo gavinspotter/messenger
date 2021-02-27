@@ -43,34 +43,36 @@ const Signup = () => {
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
-            <Card>
-                {isLoading && <LoadingSpinner asOverylay />}
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <Input
-                        name="name"
-                        valRef={register}
-                        label="name"
-                        element="input"
-                    />
-                    <Input
-                        name="email"
-                        valRef={register}
-                        label="email"
-                        element="input"
-                    />
+            <div className="auth__card">
+                <div className="auth__card-text">
+                    {isLoading && <LoadingSpinner asOverylay />}
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <Input
+                            name="name"
+                            valRef={register}
+                            label="name"
+                            element="input"
+                        />
+                        <Input
+                            name="email"
+                            valRef={register}
+                            label="email"
+                            element="input"
+                        />
 
-                    <Input
-                        name="password"
-                        valRef={register}
-                        label="password"
-                        element="input"
-                        type="password"
-                    />
-                    <Button type="submit">
-                        submit
+                        <Input
+                            name="password"
+                            valRef={register}
+                            label="password"
+                            element="input"
+                            type="password"
+                        />
+                        <Button type="submit">
+                            submit
                     </Button>
-                </form>
-            </Card>
+                    </form>
+                </div>
+            </div>
         </React.Fragment>
     )
 
