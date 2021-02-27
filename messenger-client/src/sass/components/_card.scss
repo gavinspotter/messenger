@@ -37,3 +37,17 @@
     }
 }
 
+.messenger__card{
+    margin-left:48rem;
+    margin-top: 5rem;
+    text-transform: uppercase;
+    width:40rem;
+    height:20rem;
+    display: inline-block;
+    text-align: center;
+    background: $color-white;
+    border-radius: 5%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+}
+
