@@ -100,6 +100,19 @@ body {
     border-radius: 5%;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .mb__card-text {
+      margin-top: 2rem; }
+  .messenger__card {
+    margin-left: 2rem;
+    margin-top: 5rem;
+    text-transform: uppercase;
+    width: 30rem;
+    height: 20rem;
+    display: inline-block;
+    text-align: center;
+    background: #fff;
+    border-radius: 5%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .messenger__card-text {
       margin-top: 2rem; } }
 
 .mb__listitem {
