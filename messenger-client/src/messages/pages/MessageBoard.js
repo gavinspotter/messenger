@@ -72,7 +72,7 @@ const MessageBoard = () => {
                 )
                 setSubmitVal2("")
                 setSubmitVal2(null)
-                Location.reload()
+
                 //history.push("/")
             } catch (err) {
 
@@ -107,7 +107,7 @@ const MessageBoard = () => {
                 setSubmitVal1("")
                 setSubmitVal1(null)
 
-                Location.reload()
+
                 //history.push("/")
             } catch (err) {
 
@@ -152,7 +152,7 @@ const MessageBoard = () => {
                 setSubmitVal2("")
                 setSubmitVal2(null)
                 //history.push("/")
-                Location.reload()
+
             } catch (err) {
 
             }

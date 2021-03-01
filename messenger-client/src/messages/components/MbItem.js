@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react"
-import { Link, Redirect } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
 
 import "./MbItem.css"
 import "../../css/style.css"
+import ErrorModal from "../../shared/components/UIElements/ErrorModal"
+import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 
 const MbItem = (props) => {
 
@@ -72,26 +74,36 @@ const MbItem = (props) => {
 
 
     return (
+        <React.Fragment>
+            <ErrorModal error={error} onClear={clearError} />
+            {isLoading &&
+                <LoadingSpinner />
+            }
+
+            {!isLoading &&
+                <div>
+                    <Link to={`/${props._id}/messageboard`}>
+                        <div className="mb__listitem">
+
+                            <div className="mb__listitemdiv">
+                                <div>
+                                    {chat1}<br className="mb__listitem-email" />
+                                </div>
+                                <div className="mb__listitem-email">
+                                    {chat2}<br />
+                                </div>
+                                <div className="mb__listitem-email">
+                                    {chat3}</div>
 
 
-        <Link to={`/${props._id}/messageboard`}>
-            <div className="mb__listitem">
+                            </div>
 
-                <div className="mb__listitemdiv">
-                    <div>
-                        {chat1}<br className="mb__listitem-email" />
-                    </div>
-                    <div className="mb__listitem-email">
-                        {chat2}<br />
-                    </div>
-                    <div className="mb__listitem-email">
-                        {chat3}</div>
+                        </div>
 
-
+                    </Link>
                 </div>
-
-            </div>
-        </Link>
+            }
+        </React.Fragment>
 
 
 
