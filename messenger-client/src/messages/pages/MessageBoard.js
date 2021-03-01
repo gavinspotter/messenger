@@ -158,6 +158,17 @@ const MessageBoard = () => {
             }
         }
 
+        const fetchMb = async () => {
+            try {
+                const responseData = await sendRequest(
+                    `${process.env.REACT_APP_BACKEND_URL}/messages/messageboards/${auth.userId}`,
+                )
+                setLoadedMb(responseData.messageboards)
+            } catch (err) {
+
+            }
+        }
+        fetchMb()
 
     }
 
