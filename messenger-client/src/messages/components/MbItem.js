@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, Redirect } from "react-router-dom"
 
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
@@ -49,19 +49,22 @@ const MbItem = (props) => {
 
 
     useEffect(() => {
-        const fetchEmail = async () => {
-            try {
-                const responseData = await sendRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/user/findemail/${props.chat[2]}`
-                )
-                setChat3(responseData.user.email)
-            } catch (err) {
+        if (props.chat[2]) {
+            const fetchEmail = async () => {
+                try {
+                    const responseData = await sendRequest(
+                        `${process.env.REACT_APP_BACKEND_URL}/user/findemail/${props.chat[2]}`
+                    )
+                    setChat3(responseData.user.email)
+                } catch (err) {
 
+                }
             }
+            fetchEmail()
         }
-        fetchEmail()
 
     }, [sendRequest, props.chat])
+
 
 
 
@@ -73,6 +76,7 @@ const MbItem = (props) => {
 
         <Link to={`/${props._id}/messageboard`}>
             <div className="mb__listitem">
+
                 <div className="mb__listitemdiv">
                     <div>
                         {chat1}<br className="mb__listitem-email" />
@@ -85,8 +89,10 @@ const MbItem = (props) => {
 
 
                 </div>
+
             </div>
         </Link>
+
 
 
     )

@@ -30,7 +30,7 @@ const App = () => {
           <Messages />
         </Route>
 
-        <Redirect to="/" exact />
+        <Redirect to="/" />
 
       </Switch>
     )
