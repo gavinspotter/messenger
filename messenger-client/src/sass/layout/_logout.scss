@@ -68,4 +68,23 @@
         color: $color-grey-dark
     }
 }
+
+.back{
+    position:fixed;
+        width: 8rem;
+        height: 8rem;
+        top:1rem;
+        right: 13rem;
+        border-radius: 100%;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color-black, .2);
+        text-align: center;
+        background-color: $color-white;
+        
+        &-text{
+            margin-top: 2rem;
+            font-size: 2rem;
+            color: $color-grey-dark;
+        }
+}
 }
