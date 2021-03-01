@@ -117,7 +117,7 @@
 
     .messenger__card{
         margin-left:2rem;
-        margin-top: 5rem;
+        margin-top: 10rem;
         text-transform: uppercase;
         width:30rem;
         height:20rem;
@@ -130,6 +130,20 @@
         &-text{
             margin-top: 2rem;
         }
+    }
+    .message__card{
+        max-width: 30rem;
+        height: auto ;
+        margin-left:2rem;
+        background-color: #fff;
+        border-radius: 5%;
+        margin-top: 2rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        
+        &-text{
+            padding: 1rem;
+        }
+        
     }
     
 }
