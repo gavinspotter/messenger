@@ -71,3 +71,26 @@
     }
     
 }
+
+@media only screen and (max-width: 560px) {
+    .auth__card{
+        position: absolute;
+        right:1rem;
+        top: 8rem;
+        text-transform: uppercase;
+        width:30rem;
+        height:30rem;
+        display: inline-block;
+        text-align: center;
+        background: $color-white;
+        border-radius: 100%;
+        //box-shadow: 1rem 1rem 1rem rgba($color-black, .15);
+        border: 1rem solid;
+    
+    
+        &-text{
+            margin-top: 6rem;
+        }
+    
+    }
+}

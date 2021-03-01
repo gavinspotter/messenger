@@ -73,6 +73,22 @@ body {
   .message__card-text {
     padding: 1rem; }
 
+@media only screen and (max-width: 560px) {
+  .auth__card {
+    position: absolute;
+    right: 1rem;
+    top: 8rem;
+    text-transform: uppercase;
+    width: 30rem;
+    height: 30rem;
+    display: inline-block;
+    text-align: center;
+    background: #fff;
+    border-radius: 100%;
+    border: 1rem solid; }
+    .auth__card-text {
+      margin-top: 6rem; } }
+
 .mb__listitem {
   text-decoration: none;
   margin-left: 48rem;
