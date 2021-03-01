@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react"
 import { Link, useParams } from "react-router-dom"
-import Card from "../../shared/components/UIElements/Card"
+
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 

@@ -1,8 +1,8 @@
-import React, { useContext } from "react"
+import React from "react"
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom"
 import MessageBoard from "./messages/pages/MessageBoard"
 import Messages from "./messages/pages/Messages"
-import MainNavigation from "./shared/components/navigation/MainNavigation"
+
 
 import { AuthContext } from "./shared/context/auth-context"
 import { useAuth } from './shared/hooks/auth-hook';

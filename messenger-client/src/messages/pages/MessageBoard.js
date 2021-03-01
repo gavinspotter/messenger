@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
-import { useHistory, useParams } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 import Button from "../../shared/components/FormElements/Button"
 import Input from "../../shared/components/FormElements/Input"
-import Card from "../../shared/components/UIElements/Card"
+
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 

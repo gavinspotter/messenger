@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import Card from "../../shared/components/UIElements/Card"
+
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
 
