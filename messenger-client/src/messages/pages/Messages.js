@@ -46,6 +46,7 @@ const Messages = () => {
                 }
             )
             setClear("")
+            setClear(null)
         } catch (err) {
             console.log(err)
         }

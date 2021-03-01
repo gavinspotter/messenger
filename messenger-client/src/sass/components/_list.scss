@@ -25,3 +25,32 @@
     }
 }
 
+@media only screen and (max-width: 560px) {
+    .mb__listitem{
+        text-decoration: none;
+        margin-left:2rem;
+        margin-top: 2rem;
+        text-transform: uppercase;
+        width:30rem;
+        height: 10rem;
+        display: inline-block;
+        text-align: center;
+        border-radius: 5%;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        background-color: $color-white;
+    
+        &div{&:first-child{
+            margin-top: 1rem;
+            color: $color-grey-dark
+        }}
+        &-email{
+            
+            padding: 1rem;
+            color: $color-grey-dark;
+    
+        }
+    }
+    
+}
+
+

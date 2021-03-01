@@ -121,6 +121,26 @@ body {
     padding: 1rem;
     color: #777; }
 
+@media only screen and (max-width: 560px) {
+  .mb__listitem {
+    text-decoration: none;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    width: 30rem;
+    height: 10rem;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    background-color: #fff; }
+    .mb__listitemdiv:first-child {
+      margin-top: 1rem;
+      color: #777; }
+    .mb__listitem-email {
+      padding: 1rem;
+      color: #777; } }
+
 .logout {
   position: fixed;
   width: 8rem;
@@ -130,7 +150,8 @@ body {
   border-radius: 100%;
   z-index: 2000;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
-  text-align: center; }
+  text-align: center;
+  background-color: #fff; }
   .logout-text {
     margin-top: 2rem;
     font-size: 2rem;
@@ -154,8 +175,28 @@ body {
     font-size: 2rem;
     color: #777; }
 
+@media only screen and (max-width: 560px) {
+  .logout {
+    position: fixed;
+    width: 8rem;
+    height: 8rem;
+    top: 1rem;
+    right: 13rem;
+    border-radius: 100%;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #fff; }
+    .logout-text {
+      margin-top: 2rem;
+      font-size: 2rem;
+      color: #777; }
+    .logout__button {
+      font-size: 2rem;
+      color: #777; } }
+
 .home {
   background-image: url(../img/letters.jpg);
+  background-size: cover;
   height: 100vh;
-  position: relative;
-  background-size: cover; }
+  background-repeat: no-repeat; }

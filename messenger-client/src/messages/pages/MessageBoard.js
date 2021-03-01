@@ -71,7 +71,9 @@ const MessageBoard = () => {
                     }
                 )
                 setSubmitVal2("")
-                history.push("/")
+                setSubmitVal2(null)
+                    .reload()
+                //history.push("/")
             } catch (err) {
 
             }
@@ -103,7 +105,10 @@ const MessageBoard = () => {
                     }
                 )
                 setSubmitVal1("")
-                history.push("/")
+                setSubmitVal1(null)
+
+                    .reload()
+                //history.push("/")
             } catch (err) {
 
             }
@@ -144,7 +149,8 @@ const MessageBoard = () => {
                 )
                 setSubmitVal1("")
                 setSubmitVal2("")
-                history.push("/")
+                    //history.push("/")
+                    .reload()
             } catch (err) {
 
             }
