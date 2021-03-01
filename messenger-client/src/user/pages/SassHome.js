@@ -4,9 +4,15 @@ import "../../css/style.css"
 
 const SassHome = (props) => {
     return (
-        <div className="home">
-            {props.children}
+        <div className="ahome">
+            <div className="home">
+
+                {props.children}
+
+
+            </div>
         </div>
+
     )
 }
 

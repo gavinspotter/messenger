@@ -233,6 +233,12 @@ body {
       font-size: 2rem;
       color: #777; } }
 
+.ahome {
+  height: 100vh;
+  background-image: url(../img/letters.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
 .home {
   background-image: url(../img/letters.jpg);
   background-size: cover;
