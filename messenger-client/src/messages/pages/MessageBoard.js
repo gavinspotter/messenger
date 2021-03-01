@@ -215,6 +215,7 @@ const MessageBoard = () => {
                     </form>
                 </div>
             </div>
+
             {!isLoading && loadedMb && <MbList items={loadedMb} />}
         </React.Fragment>
     )
