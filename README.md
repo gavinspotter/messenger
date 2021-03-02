@@ -1,7 +1,7 @@
 
 # messenger
 
-heroku: 
+heroku: mongomessenger.herokuapp.com
 
 ## packages
 
